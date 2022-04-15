@@ -12,8 +12,17 @@ const Cart = () => {
   console.log(cart);
   return (
     <div id="container-t">
-      <div style={{ width: "300px" }}>
+      <div
+        style={{
+          width: "300px",
+          // display: "flex",
+          // flexDirection: "column",
+          // alignItems: "center",
+          // justifyContent: "space-around",
+        }}
+      >
         <List
+          style={{}}
           className="container-t-t"
           itemLayout="horizontal"
           dataSource={cart.movies}
