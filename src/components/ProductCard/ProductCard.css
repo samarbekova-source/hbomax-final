@@ -1,7 +1,6 @@
 .card-tt {
   /* width: 320px;
   height: 600px; */
-  
 }
 
 .ant-card-body {
@@ -12,4 +11,10 @@
 
 .ant-card-bordered {
   border: none;
+}
+
+.icons-ch {
+  display: flex;
+  justify-content: space-around;
+  /* flex-direction: column; */
 }

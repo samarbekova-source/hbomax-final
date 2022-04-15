@@ -16,10 +16,6 @@ const Cart = () => {
       <div
         style={{
           width: "300px",
-          // display: "flex",
-          // flexDirection: "column",
-          // alignItems: "center",
-          // justifyContent: "space-around",
         }}
       >
         <List

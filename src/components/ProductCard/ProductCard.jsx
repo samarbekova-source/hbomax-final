@@ -10,7 +10,7 @@ import { cartContext } from "../../context/cartContext";
 import { favoritesContext } from "../../context/favoritesContext";
 import { Card } from "antd";
 
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { contextsMovie } from "../../context/contextsMovie";
 import "./ProductCard.css";
 const { Meta } = Card;
@@ -33,6 +33,7 @@ const ProductCard = ({ item }) => {
     useContext(favoritesContext);
   const [checkItem2, setCheckItem2] = useState(checkItemInFavorite(item.id));
   const { deleteMovie } = useContext(contextsMovie);
+  const navigate = useNavigate();
   return (
     <div className="card-tt">
       <Card
@@ -62,47 +63,55 @@ const ProductCard = ({ item }) => {
         }}
         title={
           <>
-            <h4>{item.name}</h4>
+            <h4 style={{ color: "white" }}>{item.name}</h4>
           </>
         }
       />
-      <HeartOutlined
-        onClick={() => {
-          addProductToFavorite(item);
-          setCheckItem2(checkItemInFavorite(item.id));
-        }}
-        style={{
-          margin: "10px",
-          fontSize: "25px",
-          color: checkItem2 ? "white" : "grey",
-        }}
-      />
-      <ShoppingOutlined
-        onClick={() => {
-          addProductToCart(item);
-          setCheckItem(checkItemInCart(item.id));
-        }}
-        style={{
-          margin: "10px",
-          fontSize: "25px",
-          color: checkItem ? "white" : "grey",
-        }}
-      />
-      <FileSearchOutlined
-        style={{
-          margin: "10px",
-          fontSize: "25px",
-          color: checkItem ? "white" : "grey",
-        }}
-      />
-
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <HeartOutlined
+          className="icons-ch"
+          onClick={() => {
+            addProductToFavorite(item);
+            setCheckItem2(checkItemInFavorite(item.id));
+          }}
+          style={{
+            margin: "10px",
+            fontSize: "25px",
+            color: checkItem2 ? "white" : "grey",
+          }}
+        />
+        <ShoppingOutlined
+          className="icons-ch"
+          onClick={() => {
+            addProductToCart(item);
+            setCheckItem(checkItemInCart(item.id));
+          }}
+          style={{
+            margin: "10px",
+            fontSize: "25px",
+            color: checkItem ? "white" : "grey",
+          }}
+        />
+        {/* <Link key="file" to={`/details/${item.id}`}> */}
+        <FileSearchOutlined
+          onClick={() => navigate(`/details/${item.id}`)}
+          className="icons-ch"
+          style={{
+            margin: "10px",
+            fontSize: "25px",
+            color: checkItem ? "white" : "grey",
+          }}
+        />
+      </div>
+      '{/* </Link> */}
+      {/* 
       <div className="desc-t">
         <Link to={`/edit/${item.id}`}>
           <button>Edit</button>
         </Link>
         <button>mov</button>
         <button onClick={() => deleteMovie(item.id)}>Delete</button>
-      </div>
+      </div> */}
       <Card />
     </div>
   );
