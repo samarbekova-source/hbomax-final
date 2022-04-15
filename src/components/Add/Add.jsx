@@ -78,7 +78,7 @@ const Add = () => {
   return (
     <div className="AddWatch">
       <Button type="primary" onClick={showModal}>
-        Add Watch
+        Add Movie
       </Button>
       <Modal
         title="new movie"

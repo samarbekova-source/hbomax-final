@@ -92,7 +92,7 @@ const ProductCard = ({ item }) => {
             color: checkItem ? "white" : "grey",
           }}
         />
-        {/* <Link key="file" to={`/details/${item.id}`}> */}
+
         <FileSearchOutlined
           onClick={() => navigate(`/details/${item.id}`)}
           className="icons-ch"
@@ -103,9 +103,8 @@ const ProductCard = ({ item }) => {
           }}
         />
       </div>
-      '{/* </Link> */}
-      {/* 
-      <div className="desc-t">
+
+      {/* <div className="desc-t">
         <Link to={`/edit/${item.id}`}>
           <button>Edit</button>
         </Link>
