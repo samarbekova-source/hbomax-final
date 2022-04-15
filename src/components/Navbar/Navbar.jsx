@@ -1,4 +1,3 @@
-
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -8,9 +7,6 @@ import {
   HeartOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
-
 import "./Navbar.css";
 
 function Navbar() {
