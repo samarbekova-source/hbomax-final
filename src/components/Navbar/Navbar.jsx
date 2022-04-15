@@ -7,7 +7,6 @@ import {
   HeartOutlined,
   ShoppingOutlined,
 } from "@ant-design/icons";
-
 import "./Navbar.css";
 
 function Navbar() {
