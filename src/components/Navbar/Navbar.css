@@ -6,7 +6,21 @@
 }
 
 body {
-  background: fixed linear-gradient(150deg, rgb(32, 32, 87), rgb(109, 13, 29));
+  /* background: fixed linear-gradient(150deg, rgb(32, 32, 87), rgb(109, 13, 29)); */
+  /* background: fixed #ff4b1f #1fddff; */
+
+  background: #fc00ff; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to right,
+    #1c2d9e,
+    #971899
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to right,
+    #1c2d9e,
+    #9e0ea1
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
   /* background-size: cover; */
   /* background-position: center; */
   width: 100%;

@@ -21,14 +21,14 @@ const StartRating = () => {
               <FaStar
                 className="star"
                 color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
-                size={100}
+                size={25}
                 onMouseEnter={() => setHover(ratingValue)}
                 onMouseLeave={() => setHover(null)}
               />
             </label>
           );
         })}
-        <p>The rating is {rating}.</p>
+        <p>The rating is {rating}</p>
       </div>
     </>
   );
