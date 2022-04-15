@@ -1,0 +1,10 @@
+.card-t {
+  width: 20vw;
+  background: rgba(251, 62, 62, 0.512);
+  margin: 20px;
+  border-radius: 5px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around;
+}

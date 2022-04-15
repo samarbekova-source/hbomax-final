@@ -1,0 +1,15 @@
+.card-tt {
+  /* width: 320px;
+  height: 600px; */
+  
+}
+
+.ant-card-body {
+  margin: 0 !important;
+  padding: 0 !important;
+  gap: 0 !important;
+}
+
+.ant-card-bordered {
+  border: none;
+}

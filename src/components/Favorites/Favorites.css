@@ -1,0 +1,10 @@
+.btn-x {
+  background: rgba(239, 11, 11, 0.395);
+  border: none;
+  top: -185px;
+  left: 233px;
+  color: white;
+}
+.btn-x:hover {
+  background: rgb(60, 20, 20);
+}
