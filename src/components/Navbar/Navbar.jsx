@@ -1,15 +1,14 @@
-
-import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { authContext } from "../../context/authContext";
 import {
   DesktopOutlined,
   HeartOutlined,
   ShoppingOutlined,
+  LogoutOutlined,
+  UserOutlined,
 } from "@ant-design/icons";
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import React, { useContext, useEffect, useState } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+import { authContext } from "../../context/authContext";
+import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
 
@@ -18,6 +17,21 @@ function Navbar() {
   const [icon, setIcon] = useState("nav__toggler");
   const { currentUser, handleLogOut } = useContext(authContext);
   const navigate = useNavigate();
+  const { getMovie } = useContext(contextsMovie);
+  const [searchParams, setSearchParams] = useSearchParams();
+  const [search, setSerach] = useState(
+    searchParams.get("q") ? searchParams.get("q") : ""
+  );
+
+  useEffect(() => {
+    getMovie();
+  }, []);
+  useEffect(() => {
+    setSearchParams({ q: search });
+  }, [search]);
+  useEffect(() => {
+    getMovie();
+  }, [searchParams]);
 
   const navToggle = () => {
     if (active === "nav__menu") {
@@ -60,6 +74,16 @@ function Navbar() {
             <Link to="/cart">
               <ShoppingOutlined className="icon-antd" />
             </Link>
+          </a>
+        </li>
+        <li className="nav__item">
+          <a href="#" className="nav__link">
+            <input
+              value={search}
+              onChange={(e) => setSerach(e.target.value)}
+              type="text"
+              placeholder="search"
+            />
           </a>
         </li>
         <li className="nav__item">

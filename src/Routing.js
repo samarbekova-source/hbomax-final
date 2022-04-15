@@ -14,6 +14,7 @@ import Orders from "./components/Orders/Orders";
 import AllProductCard from "./components/ProductCard/AllProductCard";
 import Navbar from "./components/Navbar/Navbar";
 import Auth from "./components/Auth/Auth";
+import AAAA from "./components/AAAA/AAAA";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -76,6 +77,10 @@ const Routing = () => {
       link: "/auth",
       element: <Auth />,
       id: 12,
+    },
+    {
+      link: "/aaaa",
+      element: <AAAA />,
     },
   ];
 
