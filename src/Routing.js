@@ -7,13 +7,13 @@ import AddList from "./components/AddList/AddList";
 import Comedy from "./components/Comedy/Comedy";
 import Edit from "./components/Edit/Edit";
 import Fantasy from "./components/Fantasy/Fantasy";
-
 import MainPage from "./components/MainPage/MainPage";
 import Footer from "./components/Footer/Footer";
 import Favorites from "./components/Favorites/Favorites";
 import Orders from "./components/Orders/Orders";
 import AllProductCard from "./components/ProductCard/AllProductCard";
 import Navbar from "./components/Navbar/Navbar";
+import Auth from "./components/Auth/Auth";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -71,6 +71,11 @@ const Routing = () => {
       link: "/all",
       element: <AllProductCard />,
       id: 11,
+    },
+    {
+      link: "/auth",
+      element: <Auth />,
+      id: 12,
     },
   ];
 

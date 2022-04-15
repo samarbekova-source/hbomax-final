@@ -1,66 +1,85 @@
-import React, { useEffect, useState } from 'react';
-import { useAuth } from "../../contexts/authContext";
-import { Form, Input, Button, Col, Alert, Row } from 'antd';
-import { UserOutlined, LockOutlined } from '@ant-design/icons';
-import { useNavigate } from 'react-router-dom';
+import { useContext, useState } from "react";
+import { Form, Input, Button, Row, Col, Alert } from "antd";
+import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { authContext } from "../../context/authContext";
+import { useNavigate } from "react-router-dom";
+import "./Auth.css";
 
 const Auth = () => {
-  const navigate = useNavigate()
-  const { handleLogin, handleSignUp, error } = useAuth();
-  const [hasAccount, setHasAccout] = useState(false);
-  function validatePassword(rule, value, callback) {
-    let regex = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/)
-    if (regex.test(value)) {
-      callback();
+  const { handleLogin, handleSignUp, error } = useContext(authContext);
+  const [isLogin, setIsLogin] = useState(false);
+  const navigate = useNavigate();
+
+  const onFinish = (values) => {
+    console.log("Received values of form: ", values);
+    const { email, password } = values;
+    if (isLogin) {
+      handleLogin(email, password, navigate);
     } else {
-      callback("Password should contain at least one digit,one lower case,one upper case, 8 from the mentioned characters");
+      handleSignUp(email, password, navigate);
     }
   };
-
-  return <Row className='container' span={24} style={{ marginTop: "20px" }}>
-    <Col span={7}></Col>
-    <Col span={10}>
-      {error ?
-        <Alert
-          style={{ marginBottom: "5px" }}
-          description={error}
-          type="error"
-        /> : null}
-
-      <Form
-        name="basic"
-        onFinish={(values) => hasAccount ? handleLogin(values, navigate) : handleSignUp(values, navigate)}
-        autoComplete="off"
-        layout='vertical'
-      >
-        <Form.Item
-          label="Email"
-          name="email"
-          rules={[{
-            type: 'email',
-            message: 'The input is not valid Email!',
-          },
-          { required: true, message: 'Please input your email!' }]}
+  return (
+    <div>
+      {error ? <Alert description={error} type="error" /> : null}
+      <div className="auth-form">
+        <Form
+          name="normal_login"
+          initialValues={{ remember: true }}
+          onFinish={onFinish}
         >
-          <Input type="email" prefix={<UserOutlined className="site-form-item-icon" />} placeholder="Username" />
-        </Form.Item>
+          <Form.Item
+            name="email"
+            rules={[
+              { required: true, message: "Please enter your username" },
+              {
+                type: "email",
+                message: "It is not valid email",
+              },
+            ]}
+          >
+            <Input
+              className="auth-input"
+              prefix={<UserOutlined />}
+              placeholder="   Username"
+            />
+          </Form.Item>
+          <Form.Item
+            name="password"
+            rules={[{ required: true, message: "Please enter your password" }]}
+          >
+            <Input
+              className="auth-input"
+              prefix={<LockOutlined />}
+              type="password"
+              placeholder="   Password"
+            />
+          </Form.Item>
 
-        <Form.Item
-          label="Password"
-          name="password"
-          rules={[{ required: true, message: 'Please input your password!' }, { validator: validatePassword }]}
-        >
-          <Input.Password prefix={<LockOutlined className="site-form-item-icon" />} placeholder="Password" />
-        </Form.Item>
-
-        <Form.Item>
-          <Button style={{ width: "100%" }} type="primary" htmlType="submit">{hasAccount ? "Login" : "Sign up"}</Button>
-          <br />
-          {hasAccount ? <span>Don't have an account? <a style={{ display: "inline", marginLeft: "2px" }} onClick={() => setHasAccout(false)}>Sign up</a></span> : <span>Have an account?<a style={{ display: "inline", marginLeft: "2px" }} onClick={() => setHasAccout(true)}>Log in</a></span>}
-        </Form.Item>
-      </Form>
-    </Col>
-  </Row>
+          <Form.Item>
+            <Button
+              type="primary"
+              htmlType="submit"
+              className="login-form-button"
+            >
+              {isLogin ? "Log in" : "Sign up"}
+            </Button>
+            <br />
+            {isLogin ? (
+              <div className="auth-signup">
+                Or <span onClick={() => setIsLogin(false)}>Sign up</span>
+              </div>
+            ) : (
+              <div className="auth-text">
+                Have an account?{" "}
+                <span onClick={() => setIsLogin(true)}>Log in</span>
+              </div>
+            )}
+          </Form.Item>
+        </Form>
+      </div>
+    </div>
+  );
 };
 
 export default Auth;

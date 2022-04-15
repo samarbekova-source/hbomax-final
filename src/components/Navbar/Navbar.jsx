@@ -1,10 +1,15 @@
-import React, { useState } from "react";
-import { Link } from "react-router-dom";
+import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import React, { useContext, useState } from "react";
+import { Link, useNavigate } from "react-router-dom";
+import { authContext } from "../../context/authContext";
 import "./Navbar.css";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
+  const { currentUser, handleLogOut } = useContext(authContext);
+  const navigate = useNavigate();
+
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -53,9 +58,23 @@ function Navbar() {
           </a>
         </li>
       </ul>
-      <div style={{ width: "10%" }}>
-        <button></button>
+
+      <div className="user-main">
+        <div className="user">
+          {currentUser ? (
+            <span className="user-email">
+              <h4 className="user-name">{currentUser}</h4>
+              <LogoutOutlined className="user-icon" onClick={handleLogOut} />
+            </span>
+          ) : (
+            <UserOutlined
+              className="user-icon"
+              onClick={() => navigate("/auth")}
+            />
+          )}
+        </div>
       </div>
+
       <div onClick={navToggle} className={icon}>
         <div className="line1"></div>
         <div className="line2"></div>

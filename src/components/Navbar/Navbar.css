@@ -95,3 +95,26 @@ a {
 .toggle .line3 {
   transform: rotate(45deg) translate(-4px, -5px);
 }
+
+/* .user-main {
+  background-color: aquamarine;
+  display: flex;
+  flex-direction: row;
+} */
+
+.user .user-email {
+  display: flex;
+  flex-direction: column-reverse;
+}
+
+.user .user-name {
+  font-weight: bold;
+  color: white;
+}
+
+.user .user-icon {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
