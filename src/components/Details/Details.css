@@ -1,0 +1,30 @@
+.container-details {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 70vw;
+  margin: 10vh auto;
+}
+
+.desc-ch-h1 {
+  color: black !important;
+  font-weight: bold !important;
+  font-family: "IBM Plex Sans Thai Looped", sans-serif;
+  font-family: "Poppins", sans-serif;
+  /* background-color: aqua; */
+  width: 100%;
+}
+
+.desc-ch-h3 {
+  color: aliceblue !important;
+  /* background-color: aquamarine; */
+  width: 70%;
+}
+
+.star-ch {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  width: 60%;
+  text-align: center;
+}

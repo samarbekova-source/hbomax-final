@@ -15,6 +15,7 @@ import AllProductCard from "./components/ProductCard/AllProductCard";
 import Navbar from "./components/Navbar/Navbar";
 import Auth from "./components/Auth/Auth";
 import AAAA from "./components/AAAA/AAAA";
+import Details from "./components/Details/Details";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -79,8 +80,14 @@ const Routing = () => {
       id: 12,
     },
     {
+
       link: "/aaaa",
-      element: <AAAA />,
+      element: <AAAA />
+    },
+      {
+      link: "/details/:id",
+      element: <Details />,
+      id: 13,
     },
   ];
 
