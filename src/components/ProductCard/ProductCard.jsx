@@ -1,4 +1,9 @@
-import { ShoppingOutlined, HeartOutlined } from "@ant-design/icons";
+import {
+  ShoppingOutlined,
+  HeartOutlined,
+  MoreOutlined,
+  FileSearchOutlined,
+} from "@ant-design/icons";
 
 import React, { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
@@ -83,6 +88,14 @@ const ProductCard = ({ item }) => {
           color: checkItem ? "white" : "grey",
         }}
       />
+      <FileSearchOutlined
+        style={{
+          margin: "10px",
+          fontSize: "25px",
+          color: checkItem ? "white" : "grey",
+        }}
+      />
+
       <div className="desc-t">
         <Link to={`/edit/${item.id}`}>
           <button>Edit</button>

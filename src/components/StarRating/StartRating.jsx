@@ -4,6 +4,7 @@ import "./StarRating.css";
 
 const StartRating = () => {
   const [rating, setRating] = useState(null);
+  const [hover, setHover] = useState(null);
   return (
     <>
       <div>
@@ -17,10 +18,17 @@ const StartRating = () => {
                 value={ratingValue}
                 onClick={() => setRating(ratingValue)}
               />
-              <FaStar className="star" size={100} />
+              <FaStar
+                className="star"
+                color={ratingValue <= (hover || rating) ? "#ffc107" : "#e4e5e9"}
+                size={100}
+                onMouseEnter={() => setHover(ratingValue)}
+                onMouseLeave={() => setHover(null)}
+              />
             </label>
           );
         })}
+        <p>The rating is {rating}.</p>
       </div>
     </>
   );

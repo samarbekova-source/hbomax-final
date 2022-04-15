@@ -1,7 +1,16 @@
+
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import React, { useContext, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
 import { authContext } from "../../context/authContext";
+import {
+  DesktopOutlined,
+  HeartOutlined,
+  ShoppingOutlined,
+} from "@ant-design/icons";
+import React, { useState } from "react";
+import { Link } from "react-router-dom";
+
 import "./Navbar.css";
 
 function Navbar() {
@@ -34,27 +43,28 @@ function Navbar() {
       <ul id="ul-t" className={active}>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            <Link to="/action"> Action</Link>
+            <Link to="/all">
+              <DesktopOutlined className="icon-antd" />
+            </Link>
           </a>
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            <Link to="/fantasy">Fantasy</Link>
+            <Link to="/favorites">
+              <HeartOutlined className="icon-antd" />
+            </Link>
           </a>
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
-            <Link to="/comedy"> Comedy</Link>
+            <Link to="/cart">
+              <ShoppingOutlined className="icon-antd" />
+            </Link>
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            <Link to="/favorites">Favorites</Link>
-          </a>
-        </li>
-        <li className="nav__item">
-          <a href="#" className="nav__link">
-            <Link to="/cart">cart</Link>
+          <a className="nav__link">
+            <Link to="/"> admin</Link>
           </a>
         </li>
       </ul>
