@@ -1,13 +1,24 @@
-import { Empty } from "antd";
-import React, { useContext, useEffect } from "react";
+import { Empty, Pagination } from "antd";
+import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { contextsMovie } from "../../context/contextsMovie";
 import MoviesFilter from "../MoviesFilter/MoviesFilter";
 import ProductCard from "../ProductCard/ProductCard";
 
 const Fantasy = () => {
-  const { getMovie, movies } = useContext(contextsMovie);
+  const { getMovie, movies, movieCount } = useContext(contextsMovie);
   const [searchParams, setSearchParams] = useSearchParams();
+  const [limit, setLimit] = useState(16);
+  const [page, setPage] = useState(
+    searchParams.get("_page") ? searchParams.get("_page") : 1
+  );
+
+  useEffect(() => {
+    setSearchParams({ _page: page, _limit: limit });
+  }, [page, limit]);
+  useEffect(() => {
+    getMovie();
+  }, [searchParams]);
 
   useEffect(() => {
     getMovie();
