@@ -9,7 +9,9 @@
       "id": 1,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Fantastic Beasts and Where to Find Them",
@@ -20,7 +22,9 @@
       "id": 2,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Tales from Earthsea",
@@ -31,7 +35,9 @@
       "id": 3,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Batman v Superman: Dawn of Justice",
@@ -42,7 +48,9 @@
       "id": 4,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Catwoman",
@@ -53,7 +61,9 @@
       "id": 5,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Charlie and the Chocolate Factory",
@@ -64,7 +74,9 @@
       "id": 6,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "How the Grinch Stole Christmas",
@@ -75,7 +87,9 @@
       "id": 7,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Godzilla: King of the Monsters",
@@ -86,7 +100,9 @@
       "id": 8,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Hobbit: An Unexpected Journey",
@@ -97,7 +113,9 @@
       "id": 9,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Incredible Hulk",
@@ -108,7 +126,9 @@
       "id": 10,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Matrix",
@@ -119,7 +139,9 @@
       "id": 11,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "King Kong",
@@ -130,7 +152,9 @@
       "id": 12,
       "price": 25,
       "type": "fantasy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Meet the Parents",
@@ -141,7 +165,9 @@
       "id": 13,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Bad Teacher",
@@ -152,7 +178,9 @@
       "id": 14,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "We're the Millers",
@@ -163,7 +191,9 @@
       "id": 15,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Free Guy",
@@ -174,7 +204,9 @@
       "id": 16,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Bridget Jones: The Edge of Reason",
@@ -185,7 +217,9 @@
       "id": 17,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Crazy Rich Asians",
@@ -196,7 +230,9 @@
       "id": 18,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Get Smart",
@@ -207,7 +243,9 @@
       "id": 19,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Hangover",
@@ -218,7 +256,9 @@
       "id": 20,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "He's Just Not That Into You",
@@ -229,7 +269,9 @@
       "id": 21,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Internship",
@@ -240,7 +282,9 @@
       "id": 22,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Break-Up",
@@ -251,7 +295,9 @@
       "id": 23,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Mean Girls",
@@ -262,7 +308,9 @@
       "id": 24,
       "price": 25,
       "type": "comedy",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Fast and the Furious",
@@ -273,7 +321,9 @@
       "id": 25,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The King's Man",
@@ -284,7 +334,9 @@
       "id": 26,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Transformers",
@@ -295,7 +347,9 @@
       "id": 27,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "I Am Legend",
@@ -306,7 +360,9 @@
       "id": 28,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Kick-Ass",
@@ -317,7 +373,9 @@
       "id": 29,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Ultraviolet",
@@ -328,7 +386,9 @@
       "id": 30,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Troy",
@@ -339,7 +399,9 @@
       "id": 31,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Salt",
@@ -350,7 +412,9 @@
       "id": 32,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "War",
@@ -361,7 +425,9 @@
       "id": 33,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Joker",
@@ -372,7 +438,9 @@
       "id": 34,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "The Wolverine",
@@ -383,7 +451,9 @@
       "id": 35,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     },
     {
       "name": "Aquaman",
@@ -394,7 +464,9 @@
       "id": 36,
       "price": 25,
       "type": "action",
-      "types": "all"
+      "types": "all",
+      "comments": [{}],
+      "rating": [{}]
     }
   ]
 }
