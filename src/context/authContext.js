@@ -1,18 +1,12 @@
-import { createContext, useState, useContext, useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import fire from "../fire";
 
-export const authContext = createContext();
-
-export const useAuth = () => {
-  return useContext(authContext);
-};
+export const authContext = React.createContext();
 
 const AuthContextProvider = ({ children }) => {
   const [currentUser, setCurrentUser] = useState("");
   const [error, setError] = useState("");
-  function handleLogin(values, navigate) {
-    let { email, password } = values;
-    // console.log(email, password)
+  function handleLogin(email, password, navigate) {
     setError("");
     fire
       .auth()
@@ -20,19 +14,20 @@ const AuthContextProvider = ({ children }) => {
       .then(() => navigate("/"))
       .catch((err) => setError(err.message));
   }
-  function handleSignUp(values, navigate) {
-    let { email, password } = values;
-    // console.log(email, password)
+
+  function handleSignUp(email, password, navigate) {
     setError("");
     fire
       .auth()
       .createUserWithEmailAndPassword(email, password)
-      .then(() => handleLogin({ email, password }, navigate))
+      .then(() => handleLogin(email, password, navigate))
       .catch((err) => setError(err.message));
   }
+
   function handleLogOut() {
     fire.auth().signOut();
   }
+
   function authListener() {
     fire.auth().onAuthStateChanged((user) => {
       if (user) {
@@ -42,22 +37,14 @@ const AuthContextProvider = ({ children }) => {
       }
     });
   }
+
   useEffect(() => {
     authListener();
   }, []);
-
   return (
     <authContext.Provider
-      value={{
-        currentUser,
-        handleLogOut,
-        handleLogin,
-        handleSignUp,
-        error,
-        setError,
-      }}
+      value={{ currentUser, error, handleLogin, handleSignUp, handleLogOut }}
     >
-      {" "}
       {children}
     </authContext.Provider>
   );
