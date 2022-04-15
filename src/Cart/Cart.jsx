@@ -2,6 +2,7 @@ import React, { useContext, useEffect } from "react";
 import { cartContext } from "../context/cartContext";
 import { Button, List } from "antd";
 import "./Cart.css";
+import { Link } from "react-router-dom";
 
 const Cart = () => {
   const { getCart, cart, deleteFromCart } = useContext(cartContext);
@@ -31,7 +32,9 @@ const Cart = () => {
                       >
                         Del movie
                       </Button>
-                      <Button className="btn-t-a">Buy</Button>
+                      <Link to="/orders">
+                        <Button className="btn-t-a">Buy</Button>
+                      </Link>
                     </div>
                   </>
                 }

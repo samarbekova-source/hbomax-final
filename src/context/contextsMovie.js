@@ -8,6 +8,7 @@ export const contextsMovie = React.createContext();
 const INIT_STATE = {
   movies: [],
   oneMovie: null,
+  movieCount: 0,
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -16,6 +17,7 @@ const reducer = (state = INIT_STATE, action) => {
       return {
         ...state,
         movies: action.payload.data,
+        movieCount: action.payload.headers["x-total-count"],
       };
     case CASE_GET_ONE_MOVIE:
       return {
@@ -67,6 +69,8 @@ const MovieContextProvider = ({ children }) => {
         movies: state.movies,
 
         oneMOvie: state.oneMovie,
+
+        movieCount: state.movieCount,
 
         oneMovie: state.oneMovie,
 
