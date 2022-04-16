@@ -29,11 +29,10 @@ const MainPage = () => {
   return (
     <div className="wrapper">
       <HomePage />
-      <StartRating />
 
       <div className="container-ch">
         <div>
-          <h1 className="h1-t">Explore Collections</h1>
+          <h1 id="h1-t">Explore Collections</h1>
         </div>
         <div className="main-explore">
           <div className="imgs">
@@ -56,7 +55,7 @@ const MainPage = () => {
       </div>
       <div className="main-popular">
         <div>
-          <h1 className="h1-t">Popular Searches</h1>
+          <h1 id="h1-t">Popular Searches</h1>
         </div>
         <div className="div-imgsa">
           <div className="imgsa">

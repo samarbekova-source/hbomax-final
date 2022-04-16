@@ -14,7 +14,6 @@ import Orders from "./components/Orders/Orders";
 import AllProductCard from "./components/ProductCard/AllProductCard";
 import Navbar from "./components/Navbar/Navbar";
 import Auth from "./components/Auth/Auth";
-import AAAA from "./components/AAAA/AAAA";
 import Details from "./components/Details/Details";
 
 const Routing = () => {
@@ -79,12 +78,8 @@ const Routing = () => {
       element: <Auth />,
       id: 12,
     },
-    {
 
-      link: "/aaaa",
-      element: <AAAA />
-    },
-      {
+    {
       link: "/details/:id",
       element: <Details />,
       id: 13,

@@ -4,6 +4,7 @@ import { useSearchParams } from "react-router-dom";
 import { contextsMovie } from "../../context/contextsMovie";
 import MoviesFilter from "../MoviesFilter/MoviesFilter";
 import ProductCard from "../ProductCard/ProductCard";
+import "./AllProductCard.css";
 
 const AllProductCard = () => {
   const { getMovie, movies, movieCount } = useContext(contextsMovie);
@@ -37,7 +38,7 @@ const AllProductCard = () => {
           flexWrap: "wrap",
           justifyContent: "space-evenly",
           width: "100%",
-          margin: "40px auto",
+          margin: "20px auto",
         }}
       >
         {movies.length > 0 ? (
@@ -46,7 +47,7 @@ const AllProductCard = () => {
           <Empty />
         )}
       </div>
-      <div>
+      <div className="pog-t">
         <Pagination
           total={+movieCount}
           current={+page}

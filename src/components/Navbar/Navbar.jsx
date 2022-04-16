@@ -1,23 +1,14 @@
-
-
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { authContext } from "../../context/authContext";
 import {
   DesktopOutlined,
   HeartOutlined,
   ShoppingOutlined,
-  LogoutOutlined,
-  UserOutlined,
 } from "@ant-design/icons";
 
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import { contextsMovie } from "../../context/contextsMovie";
-
-
 
 import "./Navbar.css";
 
@@ -57,7 +48,7 @@ function Navbar() {
       <a href="#" className="nav__brand">
         <Link to="/">
           <img
-            style={{ width: "200px", margin: "30px" }}
+            style={{ width: "70%", margin: " 0  5%" }}
             src="https://play.hbomax.com/assets/images/branding/desktop/hbomax/dt-hbomax-logo-in_app.svg"
             alt=""
           />
@@ -79,15 +70,16 @@ function Navbar() {
           </a>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            <Link to="/cart">
+          <Link to="/cart">
+            <a href="#" className="nav__link">
               <ShoppingOutlined className="icon-antd" />
-            </Link>
-          </a>
+            </a>
+          </Link>
         </li>
         <li className="nav__item">
           <a href="#" className="nav__link">
             <input
+              className="input-search"
               value={search}
               onChange={(e) => setSerach(e.target.value)}
               type="text"

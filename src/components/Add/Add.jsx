@@ -76,9 +76,9 @@ const Add = () => {
     setIsModalVisible(false);
   };
   return (
-    <div className="AddWatch">
+    <div className="Addmovie">
       <Button type="primary" onClick={showModal}>
-        Add Watch
+        Add movie
       </Button>
       <Modal
         title="new movie"
