@@ -15,6 +15,7 @@ import AllProductCard from "./components/ProductCard/AllProductCard";
 import Navbar from "./components/Navbar/Navbar";
 import Auth from "./components/Auth/Auth";
 import Details from "./components/Details/Details";
+import AdminPage from "./components/AdminPage/AdminPage";
 
 const Routing = () => {
   let PUBLIC_ROUTES = [
@@ -53,11 +54,11 @@ const Routing = () => {
       element: <Cart />,
       id: 7,
     },
-    {
-      link: "/edit/:id",
-      element: <Edit />,
-      id: 8,
-    },
+    // {
+    //   link: "/edit/:id",
+    //   element: <Edit />,
+    //   id: 8,
+    // },
     {
       link: "/favorites",
       element: <Favorites />,
@@ -79,10 +80,29 @@ const Routing = () => {
       id: 12,
     },
 
+
+    {
+      link: "/aaaa",
+      element: <AAAA />,
+    },
+
     {
       link: "/details/:id",
       element: <Details />,
       id: 13,
+    },
+  ];
+
+  let ADMIN_ROUTES = [
+    {
+      link: "/admin",
+      element: <AdminPage />,
+      id: 1,
+    },
+    {
+      link: "/edit/:id",
+      element: <Edit />,
+      id: 2,
     },
   ];
 
@@ -93,6 +113,9 @@ const Routing = () => {
         {/* <Header /> */}
         <Routes>
           {PUBLIC_ROUTES.map((item) => (
+            <Route key={item.id} path={item.link} element={item.element} />
+          ))}
+          {ADMIN_ROUTES.map((item) => (
             <Route key={item.id} path={item.link} element={item.element} />
           ))}
         </Routes>

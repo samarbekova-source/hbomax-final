@@ -23,7 +23,6 @@ import halloween from "../MainPage/assets/halloween.jpeg";
 import shrek from "../MainPage/assets/shrek.jpeg";
 import { Link } from "react-router-dom";
 import HomePage from "../HomePage/HomePage";
-import StartRating from "../StarRating/StartRating";
 
 const MainPage = () => {
   return (

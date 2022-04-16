@@ -1,8 +1,14 @@
+
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+
 import {
   DesktopOutlined,
   HeartOutlined,
   ShoppingOutlined,
+
+
+  MehOutlined,
+
 } from "@ant-design/icons";
 
 import React, { useContext, useEffect, useState } from "react";
@@ -89,7 +95,9 @@ function Navbar() {
         </li>
         <li className="nav__item">
           <a className="nav__link">
-            <Link to="/"> admin</Link>
+            <Link to="/admin">
+              <MehOutlined className="icon-antd" />
+            </Link>
           </a>
         </li>
       </ul>
