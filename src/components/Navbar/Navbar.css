@@ -1,10 +1,3 @@
-*,
-*::after,
-*::before {
-  margin: 0;
-  box-sizing: border-box;
-}
-
 body {
   /* background: fixed linear-gradient(150deg, rgb(32, 32, 87), rgb(109, 13, 29)); */
   /* background: fixed #ff4b1f #1fddff; */
@@ -32,19 +25,32 @@ html {
 body {
   font-size: 1.6rem;
 }
-li {
+.nav__item {
   list-style: none;
   color: white;
 }
+.input-search {
+  padding-left: 10px;
+  border-radius: 5px;
+  border: none;
+  color: black;
+  height: 30px;
+  margin-top: 5px;
+}
 
 #ul-t {
-  width: 80%;
+  width: 50%;
   justify-content: center;
+  z-index: 5;
+  align-items: center;
+  height: 100vh;
 }
-a {
+.nav__link {
   text-decoration: none;
   display: flex;
   justify-content: center;
+  align-items: center;
+  color: white;
 }
 
 .icon-antd {
@@ -58,10 +64,11 @@ a {
   align-items: center;
   height: 8vh;
   background: rgb(5, 16, 27);
+  z-index: 6;
 }
 .nav__brand {
   text-transform: uppercase;
-  width: 20%;
+  width: 30%;
 }
 
 .nav__menu {
@@ -88,11 +95,11 @@ a {
   }
   .nav__menu {
     position: fixed;
-    top: 7vh;
+    top: 6vh;
     right: 0;
     height: 93vh;
-    width: 50vw;
-    background: rgb(0, 33, 65);
+    width: 200px;
+    background: rgb(36, 76, 117);
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;

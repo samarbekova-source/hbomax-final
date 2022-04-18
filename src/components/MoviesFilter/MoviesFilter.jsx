@@ -7,17 +7,17 @@ const MoviesFilter = () => {
     <div className="movies-filter-container">
       <Link to="/all">
         {" "}
-        <button>All</button>
+        <button className="btn-filter-tt">All</button>
       </Link>
 
       <Link to="/fantasy">
-        <button>Fantasy</button>
+        <button className="btn-filter-tt">Fantasy</button>
       </Link>
       <Link to="/comedy">
-        <button>Comedy</button>
+        <button className="btn-filter-tt">Comedy</button>
       </Link>
       <Link to="/action">
-        <button>Action</button>
+        <button className="btn-filter-tt">Action</button>
       </Link>
     </div>
   );

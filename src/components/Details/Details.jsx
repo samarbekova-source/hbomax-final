@@ -13,19 +13,39 @@ const Details = () => {
   console.log(oneMovie);
 
   return oneMovie ? (
+
     <div className="container-details">
       <div>
         <img src={oneMovie.image1} width="70%" alt="" />
-        <div className="star-ch">
-          <StartRating />
+        <div className="star-ch"></div>
+        <StartRating />
+      </div>
+    <>
+      <div className="container-details">
+        <div>
+          <img src={oneMovie.image1} width="70%" alt="" />
+          <div className="star-ch">
+            <StartRating />
+          </div>
+        </div>
+
+
+        <div>
+          <h1 className="desc-ch-h1">{oneMovie.name}</h1>
+          <p>{oneMovie.year} year</p>
+          <h3 className="desc-ch-h3">{oneMovie.description}</h3>
         </div>
       </div>
-
       <div>
-        <h1 className="desc-ch-h1">{oneMovie.name}</h1>
-        <h3 className="desc-ch-h3">{oneMovie.description}</h3>
+        <video
+          src={oneMovie.video}
+          muted
+          autoPlay
+          loop
+          style={{ width: "90%", marginLeft: "50px", marginTop: "0px" }}
+        ></video>
       </div>
-    </div>
+    </>
   ) : (
     <span>Loading</span>
   );

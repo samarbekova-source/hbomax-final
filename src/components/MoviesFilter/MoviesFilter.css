@@ -3,22 +3,32 @@
   flex-direction: row;
   align-items: center;
   justify-content: center;
+  flex-wrap: wrap;
 }
-.movies-filter-container button {
-  margin-right: 2rem;
+/* .movies-filter-container button { */
+/* margin-right: 2rem;
   min-width: 5rem;
   padding: 0.5rem 1rem;
-  border: none;
-  background: white;
+  /* border: none; */
+/* background: white;
   color: rgb(65, 98, 168);
   border-radius: 1rem;
   border: 2px solid rgb(65, 98, 168);
   font-weight: bold;
   cursor: pointer;
-  margin-top: 20px;
-}
+  margin-top: 20px; */
+/* } */
 
-button:active {
-  background: rgb(65, 98, 168);
-  color: white;
+.btn-filter-tt {
+  position: relative;
+  padding: 10px 30px;
+  margin: 10px;
+  background: linear-gradient(45deg, rgb(173, 159, 228), rgb(198, 183, 185));
+  color: #fff;
+  font-weight: bold;
+  border: none;
+  border-radius: 2px;
+}
+.btn-filter-tt:active {
+  background: linear-gradient(90deg, blue, white);
 }

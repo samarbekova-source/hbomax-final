@@ -1,12 +1,5 @@
 * {
-  margin: 0;
-  padding: 0;
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
   font-family: "IBM Plex Sans Thai Looped", sans-serif;
-}
-
-*::after,
-*::before {
-  box-sizing: border-box;
 }

@@ -4,7 +4,7 @@ const AddCard = ({ item }) => {
   return (
     <div className="card-t">
       <img
-        style={{ width: "100%", height: "100%", borderRadius: "10px" }}
+        style={{ width: "100%", height: "100%" }}
         src={item.image1}
         alt="image"
       />

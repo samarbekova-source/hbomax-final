@@ -4,14 +4,18 @@
       "name": "Harry Potter and the Sorcerer's Stone",
       "description": "Harry Potter and the Sorcerer's Stone is a red-blooded adventure movie, dripping with atmosphere, filled with the gruesome and the sublime, and surprisingly faithful to the novel. A lot of things could have gone wrong, and none of them have: Chris Columbus' movie is an enchanting classic that does full justice to a story that was a daunting challenge.",
       "year": 2001,
-      "image1": "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg",
-      "video": "https://p1.oc.kg:8082/video/d/18/Garri_potter_i_fil_kamen.mp4?an=0",
+      "image1": "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg"
+      "video": "https://p1.oc.kg:8082/video/f/2/King_Richard.mp4?an=1",
       "id": 1,
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Fantastic Beasts and Where to Find Them",
@@ -23,8 +27,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Tales from Earthsea",
@@ -36,8 +44,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Batman v Superman: Dawn of Justice",
@@ -49,8 +61,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Catwoman",
@@ -62,8 +78,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Charlie and the Chocolate Factory",
@@ -75,8 +95,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "How the Grinch Stole Christmas",
@@ -88,8 +112,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Godzilla: King of the Monsters",
@@ -101,8 +129,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Hobbit: An Unexpected Journey",
@@ -114,8 +146,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Incredible Hulk",
@@ -127,8 +163,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Matrix",
@@ -140,8 +180,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "King Kong",
@@ -153,8 +197,12 @@
       "price": 25,
       "type": "fantasy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Meet the Parents",
@@ -166,8 +214,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Bad Teacher",
@@ -179,8 +231,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "We're the Millers",
@@ -192,8 +248,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Free Guy",
@@ -205,8 +265,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Bridget Jones: The Edge of Reason",
@@ -218,8 +282,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Crazy Rich Asians",
@@ -231,8 +299,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Get Smart",
@@ -244,8 +316,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Hangover",
@@ -257,8 +333,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "He's Just Not That Into You",
@@ -270,21 +350,33 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Internship",
       "description": "Two salesmen whose careers have been torpedoed by the digital age find their way into a coveted internship at Google, where they must compete with a group of young, tech-savvy geniuses for a shotat employment.",
       "year": 2013,
       "image1": "https://m.media-amazon.com/images/M/MV5BMjM1MzczMDgwOV5BMl5BanBnXkFtZTcwMDM4NjM2OQ@@._V1_FMjpg_UX1000_.jpg",
-      "video": "https://p1.oc.kg:8082/video/d/18/The_Intership_2013.mp4?an=0",
+
+      
+
+      "video": "https://oc.kg/background/c_dve7AqFzGr1VUgoDWna4.mp4",
+
       "id": 22,
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Break-Up",
@@ -296,8 +388,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Mean Girls",
@@ -309,8 +405,12 @@
       "price": 25,
       "type": "comedy",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Fast and the Furious",
@@ -322,8 +422,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The King's Man",
@@ -335,8 +439,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Transformers",
@@ -348,8 +456,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "I Am Legend",
@@ -361,8 +473,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Kick-Ass",
@@ -374,8 +490,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Ultraviolet",
@@ -387,8 +507,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Troy",
@@ -400,8 +524,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Salt",
@@ -413,8 +541,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "War",
@@ -426,8 +558,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Joker",
@@ -439,8 +575,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "The Wolverine",
@@ -452,8 +592,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     },
     {
       "name": "Aquaman",
@@ -465,8 +609,12 @@
       "price": 25,
       "type": "action",
       "types": "all",
-      "comments": [{}],
-      "rating": [{}]
+      "comments": [
+        {}
+      ],
+      "rating": [
+        {}
+      ]
     }
   ]
 }

@@ -1,6 +1,7 @@
 import React, { useContext, useEffect, useState } from "react";
 import { useSearchParams } from "react-router-dom";
 import { contextsMovie } from "../../context/contextsMovie";
+import "./Pagination.css";
 
 const Pagination = () => {
   const { movieCount, getMovie } = useContext(contextsMovie);
@@ -21,7 +22,7 @@ const Pagination = () => {
   //
   //
   return (
-    <div>
+    <div className="pog-t">
       <Pagination
         total={+movieCount}
         current={+page}
