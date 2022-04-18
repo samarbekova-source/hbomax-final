@@ -20,63 +20,71 @@ const Auth = () => {
     }
   };
   return (
-    <div>
-      {error ? <Alert description={error} type="error" /> : null}
-      <div className="auth-form">
-        <Form
-          name="normal_login"
-          initialValues={{ remember: true }}
-          onFinish={onFinish}
-        >
-          <Form.Item
-            name="email"
-            rules={[
-              { required: true, message: "Please enter your username" },
-              {
-                type: "email",
-                message: "It is not valid email",
-              },
-            ]}
+    <div className="auth-container">
+      {/* <div className="auth-box">
+        <h1>New here?</h1>
+        <p>Sign up and enjoy watching our movies!</p>
+      </div> */}
+      <div className="auth-form-main">
+        {error ? <Alert description={error} type="error" /> : null}
+        <div className="auth-form">
+          <Form
+            name="normal_login"
+            initialValues={{ remember: true }}
+            onFinish={onFinish}
           >
-            <Input
-              className="auth-input"
-              prefix={<UserOutlined />}
-              placeholder="   Username"
-            />
-          </Form.Item>
-          <Form.Item
-            name="password"
-            rules={[{ required: true, message: "Please enter your password" }]}
-          >
-            <Input
-              className="auth-input"
-              prefix={<LockOutlined />}
-              type="password"
-              placeholder="   Password"
-            />
-          </Form.Item>
-
-          <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
+            <Form.Item
+              name="email"
+              rules={[
+                { required: true, message: "Please enter your username" },
+                {
+                  type: "email",
+                  message: "It is not valid email",
+                },
+              ]}
             >
-              {isLogin ? "Log in" : "Sign up"}
-            </Button>
-            <br />
-            {isLogin ? (
-              <div className="auth-signup">
-                Or <span onClick={() => setIsLogin(false)}>Sign up</span>
-              </div>
-            ) : (
-              <div className="auth-text">
-                Have an account?{" "}
-                <span onClick={() => setIsLogin(true)}>Log in</span>
-              </div>
-            )}
-          </Form.Item>
-        </Form>
+              <Input
+                className="auth-input"
+                prefix={<UserOutlined />}
+                placeholder="   Username"
+              />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[
+                { required: true, message: "Please enter your password" },
+              ]}
+            >
+              <Input
+                className="auth-input"
+                prefix={<LockOutlined />}
+                type="password"
+                placeholder="   Password"
+              />
+            </Form.Item>
+
+            <Form.Item>
+              <Button
+                type="primary"
+                htmlType="submit"
+                className="login-form-button"
+              >
+                {isLogin ? "Log in" : "Sign up"}
+              </Button>
+              <br />
+              {isLogin ? (
+                <div className="auth-signup">
+                  Or <span onClick={() => setIsLogin(false)}>Sign up</span>
+                </div>
+              ) : (
+                <div className="auth-text">
+                  Have an account?{" "}
+                  <span onClick={() => setIsLogin(true)}>Log in</span>
+                </div>
+              )}
+            </Form.Item>
+          </Form>
+        </div>
       </div>
     </div>
   );

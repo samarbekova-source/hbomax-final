@@ -129,11 +129,13 @@ a {
 .user .user-name {
   font-weight: bold;
   color: white;
+  margin-right: 50px;
 }
 
 .user .user-icon {
   color: white;
-  display: flex;
+  /* display: flex;
   flex-direction: row;
-  justify-content: center;
+  justify-content: center; */
+  margin-right: 50px;
 }

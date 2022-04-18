@@ -1,9 +1,7 @@
-
-
-import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
-import React, { useContext, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import { authContext } from "../../context/authContext";
+// import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+// import { authContext } from "../../context/authContext";
 import {
   DesktopOutlined,
   HeartOutlined,
@@ -11,14 +9,8 @@ import {
   LogoutOutlined,
   UserOutlined,
 } from "@ant-design/icons";
-
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import { contextsMovie } from "../../context/contextsMovie";
-
-
-
 import "./Navbar.css";
 
 function Navbar() {
