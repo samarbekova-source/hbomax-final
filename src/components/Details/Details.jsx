@@ -1,16 +1,41 @@
-import React, { useContext, useEffect } from "react";
-import StartRating from "../StarRating/StartRating";
+import React, { useContext, useEffect, useState } from "react";
+
 import { contextsMovie } from "../../context/contextsMovie";
 import { useParams } from "react-router-dom";
 import "./Details.css";
+import { authContext } from "../../context/authContext";
+import { Rate } from "antd";
 
 const Details = () => {
   const { getOneMovie, oneMovie } = useContext(contextsMovie);
+  const { currentUser } = useContext(authContext);
+  const { updateRating } = useContext(contextsMovie);
+  const [createRating, setCreateRating] = useState(null);
   const params = useParams();
   useEffect(() => {
     getOneMovie(params.id);
   }, []);
   console.log(oneMovie);
+  function saveRaiting(id, newRating) {
+    let rating = {
+      rating: newRating,
+      name: currentUser,
+      id: Date.now(),
+    };
+    updateRating(id, rating);
+    let userRatings = oneMovie.ratings.some(
+      (item) => item.user === currentUser
+    );
+    if (userRatings) {
+      let filteredRatings = oneMovie.ratings.filter((item) => {
+        return item.user !== currentUser;
+      });
+      updateRating(params.id, filteredRatings);
+    } else {
+      let ratings = [...oneMovie.ratings, rating];
+      updateRating(params.id, ratings);
+    }
+  }
 
   return oneMovie ? (
     <>
@@ -18,9 +43,7 @@ const Details = () => {
         <div className="container-details">
           <div>
             <img src={oneMovie.image1} width="70%" alt="" />
-            <div className="star-ch">
-              <StartRating />
-            </div>
+
           </div>
 
           <div>
@@ -34,7 +57,7 @@ const Details = () => {
         <video
           src={oneMovie.video}
           muted
-          autoPlay
+          // autoPlay
           loop
           controls
           style={{ width: "90%", marginLeft: "50px", marginTop: "0px" }}

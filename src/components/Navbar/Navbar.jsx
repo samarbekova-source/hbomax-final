@@ -69,7 +69,7 @@ function Navbar({ userImage }) {
           <Link to="/favorites">
             <a href="#" className="nav__link">
               <HeartOutlined className="icon-antd" />
-              <h1 style={{ color: "white", marginTop: "15px" }}>Likes</h1>
+              <h1 style={{ color: "white", marginTop: "15px" }}>Favorites</h1>
             </a>
           </Link>
         </li>
@@ -95,7 +95,10 @@ function Navbar({ userImage }) {
         <li className="nav__item">
           <a className="nav__link">
             <Link to="/admin">
-              <MehOutlined className="icon-antd" />
+              <MehOutlined
+                style={{ color: "white", marginTop: "10px" }}
+                className="icon-antd"
+              />
             </Link>
           </a>
         </li>
@@ -105,12 +108,17 @@ function Navbar({ userImage }) {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
+
               <LogoutOutlined
                 className="icon-antd"
                 style={{ color: "white", marginLeft: "150px" }}
                 onClick={handleLogOut}
               />
               <img src={userImage} onClick={handleLogOut} />
+
+              <h4 className="user-name">{currentUser}</h4>
+              <LogoutOutlined className="icon-antd" onClick={handleLogOut} />
+
             </span>
           ) : (
             <UserOutlined
