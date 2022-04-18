@@ -4,7 +4,7 @@
       "name": "Harry Potter and the Sorcerer's Stone",
       "description": "Harry Potter and the Sorcerer's Stone is a red-blooded adventure movie, dripping with atmosphere, filled with the gruesome and the sublime, and surprisingly faithful to the novel. A lot of things could have gone wrong, and none of them have: Chris Columbus' movie is an enchanting classic that does full justice to a story that was a daunting challenge.",
       "year": 2001,
-      "image1": "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg"
+      "image1": "https://images.moviesanywhere.com/143cdb987186a1c8f94d4f18de211216/fdea56fa-2703-47c1-8da8-70fc5382e1ea.jpg",
       "video": "https://p1.oc.kg:8082/video/f/2/King_Richard.mp4?an=1",
       "id": 1,
       "price": 25,
@@ -13,9 +13,11 @@
       "comments": [
         {}
       ],
-      "rating": [
-        {}
-      ]
+      "ratings": {
+        "rating": 5,
+        "name": "",
+        "id": 1650276902141
+      }
     },
     {
       "name": "Fantastic Beasts and Where to Find Them",
@@ -30,9 +32,11 @@
       "comments": [
         {}
       ],
-      "rating": [
-        {}
-      ]
+      "ratings": {
+        "rating": 2.5,
+        "name": "chika@gmail.com",
+        "id": 1650276275074
+      }
     },
     {
       "name": "Tales from Earthsea",
@@ -45,9 +49,6 @@
       "type": "fantasy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -63,9 +64,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -79,9 +77,6 @@
       "type": "fantasy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -97,9 +92,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -113,9 +105,6 @@
       "type": "fantasy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -131,9 +120,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -147,9 +133,6 @@
       "type": "fantasy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -165,9 +148,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -181,9 +161,6 @@
       "type": "fantasy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -199,9 +176,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -215,9 +189,6 @@
       "type": "comedy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -233,9 +204,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -249,9 +217,6 @@
       "type": "comedy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -267,9 +232,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -283,9 +245,6 @@
       "type": "comedy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -301,9 +260,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -317,9 +273,6 @@
       "type": "comedy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -335,9 +288,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -352,9 +302,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -362,19 +309,12 @@
       "description": "Two salesmen whose careers have been torpedoed by the digital age find their way into a coveted internship at Google, where they must compete with a group of young, tech-savvy geniuses for a shotat employment.",
       "year": 2013,
       "image1": "https://m.media-amazon.com/images/M/MV5BMjM1MzczMDgwOV5BMl5BanBnXkFtZTcwMDM4NjM2OQ@@._V1_FMjpg_UX1000_.jpg",
-
-      
-
       "video": "https://oc.kg/background/c_dve7AqFzGr1VUgoDWna4.mp4",
-
       "id": 22,
       "price": 25,
       "type": "comedy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -390,9 +330,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -406,9 +343,6 @@
       "type": "comedy",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -424,9 +358,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -440,9 +371,6 @@
       "type": "action",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -458,9 +386,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -474,9 +399,6 @@
       "type": "action",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -492,9 +414,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -508,9 +427,6 @@
       "type": "action",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -526,9 +442,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -542,9 +455,6 @@
       "type": "action",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -560,9 +470,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -576,9 +483,6 @@
       "type": "action",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     },
@@ -594,9 +498,6 @@
       "types": "all",
       "comments": [
         {}
-      ],
-      "rating": [
-        {}
       ]
     },
     {
@@ -610,9 +511,6 @@
       "type": "action",
       "types": "all",
       "comments": [
-        {}
-      ],
-      "rating": [
         {}
       ]
     }

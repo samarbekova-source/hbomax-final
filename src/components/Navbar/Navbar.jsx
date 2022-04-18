@@ -1,5 +1,4 @@
-
-// import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import React, { useContext, useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 // import { authContext } from "../../context/authContext";
@@ -8,10 +7,7 @@ import {
   DesktopOutlined,
   HeartOutlined,
   ShoppingOutlined,
-
-
   MehOutlined,
-
 } from "@ant-design/icons";
 import { authContext } from "../../context/authContext";
 import { contextsMovie } from "../../context/contextsMovie";
@@ -73,7 +69,7 @@ function Navbar() {
           <Link to="/favorites">
             <a href="#" className="nav__link">
               <HeartOutlined className="icon-antd" />
-              <h1 style={{ color: "white", marginTop: "15px" }}>Likes</h1>
+              <h1 style={{ color: "white", marginTop: "15px" }}>Favorites</h1>
             </a>
           </Link>
         </li>
@@ -99,7 +95,10 @@ function Navbar() {
         <li className="nav__item">
           <a className="nav__link">
             <Link to="/admin">
-              <MehOutlined className="icon-antd" />
+              <MehOutlined
+                style={{ color: "white", marginTop: "10px" }}
+                className="icon-antd"
+              />
             </Link>
           </a>
         </li>
@@ -110,11 +109,12 @@ function Navbar() {
           {currentUser ? (
             <span className="user-email">
               <h4 className="user-name">{currentUser}</h4>
-              <LogoutOutlined className="user-icon" onClick={handleLogOut} />
+              <LogoutOutlined className="icon-antd" onClick={handleLogOut} />
             </span>
           ) : (
             <UserOutlined
-              className="user-icon"
+              className="icon-antd"
+              style={{ color: "white", marginLeft: "150px" }}
               onClick={() => navigate("/auth")}
             />
           )}

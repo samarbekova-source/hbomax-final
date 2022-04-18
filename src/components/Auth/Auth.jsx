@@ -43,29 +43,13 @@ const Auth = () => {
                 },
               ]}
             >
-
-              {isLogin ? "Log in" : "Sign up"}
-            </Button>
-            <br />
-            {isLogin ? (
-              <div className="auth-signup">
-                <span onClick={() => setIsLogin(false)}>Sign up</span>
-              </div>
-            ) : (
-              <div className="auth-text">
-                Have an account?{" "}
-                <span onClick={() => setIsLogin(true)}>Log in</span>
-              </div>
-            )}
-          </Form.Item>
-        </Form>
-
               <Input
                 className="auth-input"
                 prefix={<UserOutlined />}
                 placeholder="   Username"
               />
             </Form.Item>
+
             <Form.Item
               name="password"
               rules={[
@@ -102,7 +86,6 @@ const Auth = () => {
             </Form.Item>
           </Form>
         </div>
-
       </div>
     </div>
   );
