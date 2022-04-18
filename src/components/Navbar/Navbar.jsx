@@ -1,5 +1,8 @@
 
-import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+// import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import React, { useContext, useState, useEffect } from "react";
+import { Link, useNavigate, useSearchParams } from "react-router-dom";
+// import { authContext } from "../../context/authContext";
 
 import {
   DesktopOutlined,
@@ -10,9 +13,6 @@ import {
   MehOutlined,
 
 } from "@ant-design/icons";
-
-import React, { useContext, useEffect, useState } from "react";
-import { Link, useNavigate, useSearchParams } from "react-router-dom";
 import { authContext } from "../../context/authContext";
 import { contextsMovie } from "../../context/contextsMovie";
 
