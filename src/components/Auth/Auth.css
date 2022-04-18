@@ -4,6 +4,12 @@
   align-content: stretch;
   justify-content: space-evenly;
   align-items: flex-end;
+  background-image: url("https://img.freepik.com/free-vector/camera-background-with-composition-realistic-dark-sky-professional-camera-with-light-text_1284-60593.jpg?w=2000");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  /* height: 600px; */
+  margin-bottom: -40px;
 }
 
 .auth-box {
@@ -36,14 +42,15 @@
 .auth-form-main {
   width: 40%;
   height: 400px;
-  box-shadow: 10px 5px 5px rgb(53, 44, 49);
-  border: 2px solid rgb(56, 53, 53);
-  background-image: url("https://png.pngtree.com/background/20211217/original/pngtree-movie-film-white-light-effect-spot-background-picture-image_1576158.jpg");
-  border-radius: 10px;
+  /* box-shadow: 10px 5px 5px rgb(53, 44, 49); */
+  /* border: 2px solid rgb(56, 53, 53); */
+  /* background-image: url("https://png.pngtree.com/background/20211217/original/pngtree-movie-film-white-light-effect-spot-background-picture-image_1576158.jpg"); */
+  /* border-radius: 10px; */
 }
 .auth-form {
   width: 80%;
-  margin: 0 auto;
+  /* margin: 0 auto; */
+  margin-left: 300px;
   margin-top: 50px;
   border-radius: 10px;
   padding-top: 50px;
@@ -51,7 +58,7 @@
 
 .auth-form .login-form-button {
   height: 40px;
-  background-color: rgb(64, 44, 241);
+  background-color: rgb(28, 26, 26);
   margin: 0 auto;
   display: flex;
   align-items: center;
@@ -60,7 +67,8 @@
 
 .auth-form .auth-input {
   border-radius: 15px;
-  background: linear-gradient(45deg, rgb(61, 61, 206), rgb(207, 99, 117));
+  border-color: black;
+  /* background: linear-gradient(45deg, rgb(61, 61, 206), rgb(207, 99, 117)); */
   height: 40px;
   padding-left: 20px;
 }

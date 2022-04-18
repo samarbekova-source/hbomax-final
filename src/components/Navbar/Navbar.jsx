@@ -1,5 +1,4 @@
-
-// import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
+import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 import React, { useContext, useState, useEffect } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
 // import { authContext } from "../../context/authContext";
@@ -8,17 +7,14 @@ import {
   DesktopOutlined,
   HeartOutlined,
   ShoppingOutlined,
-
-
   MehOutlined,
-
 } from "@ant-design/icons";
 import { authContext } from "../../context/authContext";
 import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ userImage }) {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const { currentUser, handleLogOut } = useContext(authContext);
@@ -109,12 +105,17 @@ function Navbar() {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-              <h4 className="user-name">{currentUser}</h4>
-              <LogoutOutlined className="user-icon" onClick={handleLogOut} />
+              <LogoutOutlined
+                className="icon-antd"
+                style={{ color: "white", marginLeft: "150px" }}
+                onClick={handleLogOut}
+              />
+              <img src={userImage} onClick={handleLogOut} />
             </span>
           ) : (
             <UserOutlined
-              className="user-icon"
+              className="icon-antd"
+              style={{ color: "white", marginLeft: "150px" }}
               onClick={() => navigate("/auth")}
             />
           )}
