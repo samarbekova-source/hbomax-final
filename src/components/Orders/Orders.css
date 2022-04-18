@@ -11,9 +11,9 @@
   min-height: 100vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-  flex-flow: column;
-  padding-bottom: 60px;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  padding: 0 10px;
 }
 
 .coniatner-main .order-form {
@@ -21,7 +21,7 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  background: linear-gradient(45deg, blue, pink);
+  background: rgba(148, 104, 22, 0.847);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
   padding: 20px;
   width: 600px;
@@ -38,13 +38,14 @@
 }
 
 .coniatner-main .order-form .order-input {
-  margin: 0 auto;
+  margin: 0 10%;
   padding-left: 10px;
   border-radius: 5px;
   width: 80%;
   height: 40px;
   text-decoration: none;
   text-transform: uppercase;
+  font-weight: bold;
 }
 
 .coniatner-main .order-form .bills p {
@@ -61,11 +62,11 @@
   justify-content: center;
   flex-direction: column;
   border-radius: 5px;
-  background: linear-gradient(45deg, blue, pink);
+  background: rgba(126, 10, 10, 0.695);
   box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
-  padding: 20px;
   width: 600px;
   margin-top: 15px;
+  padding: 20px 0;
 }
 
 .payment-form form {
@@ -77,20 +78,34 @@
 
 .payment-form .payment-input {
   margin: 10px 0 5px;
-  padding-left: 10px;
   border-radius: 5px;
   width: 50%;
   height: 30px;
   text-decoration: none;
   text-transform: lowercase;
+  font-weight: bold;
 }
 
 .payment-form .payment-btn {
   font-weight: bold;
   background-color: rgb(117, 51, 178);
   border-radius: 8px;
-  width: 13vw;
+  width: 100px;
   height: 25px;
   font-weight: bold;
   margin-top: 15px;
+}
+
+@media (max-width: 605px) {
+  .order-form {
+    width: 500px;
+  }
+  .payment-form {
+    width: 400px;
+  }
+}
+@media (max-width: 350px) {
+  .payment-form {
+    width: 320px;
+  }
 }

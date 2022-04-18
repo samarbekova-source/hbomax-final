@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Form, Input, Button, Row, Col, Alert } from "antd";
+import { Form, Input, Button, Alert } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { authContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
@@ -67,7 +67,7 @@ const Auth = () => {
             <br />
             {isLogin ? (
               <div className="auth-signup">
-                Or <span onClick={() => setIsLogin(false)}>Sign up</span>
+                <span onClick={() => setIsLogin(false)}>Sign up</span>
               </div>
             ) : (
               <div className="auth-text">
