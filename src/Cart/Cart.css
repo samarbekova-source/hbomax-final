@@ -2,22 +2,27 @@
   display: flex;
   width: 100%;
   height: 100%;
-  background-color: aqua;
+  justify-content: center;
+  align-items: center;
+  margin: 10px;
 }
 
 .btn-cart {
   width: 100%;
   height: 40px;
-  background: rgba(0, 0, 0, 0.79);
+  background: rgba(234, 233, 233, 0.79);
   display: flex;
 }
 .btn-t-a {
-  background: linear-gradient(90deg, rgb(41, 0, 128), blue);
+  background: grey;
   top: 185px;
   margin: 0 23px;
 }
 #container-t {
   display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
   width: 100%;
   height: 100%;
 }

@@ -1,17 +1,12 @@
 import React from "react";
 import Carusel from "../../carusel/Carusel";
+import Cinematica from "../Cinematica/Cinematica";
 import "./HomePage.css";
 
 const HomePage = () => {
   return (
     <div className="caruselka-t">
-      <div>
-        <img
-          style={{ width: "200px", margin: "30px" }}
-          src="https://play.hbomax.com/assets/images/branding/desktop/hbomax/dt-hbomax-logo-in_app.svg"
-          alt=""
-        />
-      </div>
+      <Cinematica />
       <div className="history-hbo">
         <Carusel />
       </div>

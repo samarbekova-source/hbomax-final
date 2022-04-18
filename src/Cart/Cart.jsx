@@ -13,15 +13,10 @@ const Cart = () => {
   console.log(cart);
   return (
     <div id="container-t">
-      <div
-        style={{
-          width: "300px",
-        }}
-      >
+      <div className="container-t">
         <List
-          style={{}}
           className="container-t-t"
-          itemLayout="horizontal"
+          // itemLayout="horizontal"
           dataSource={cart.movies}
           renderItem={(item) => (
             <List.Item

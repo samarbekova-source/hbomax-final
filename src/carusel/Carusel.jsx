@@ -13,12 +13,12 @@ const Carusel = () => {
 
   return (
     <div className="block-carousel-t">
-      <div>
-        <Carousel className="carusel" style={{ width: "50%" }} autoplay>
+      <div className="carusel">
+        <Carousel className="carusel" autoplay>
           <div>
             <h3 style={contentStyle}>
               <img
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "100%" }}
                 src="https://www.heavenofhorror.dk/wp-content/uploads/2021/01/morbius-2022-marvel.jpg"
                 alt=""
               />
@@ -27,7 +27,7 @@ const Carusel = () => {
           <div>
             <h3 style={contentStyle}>
               <img
-                style={{ width: "100%" }}
+                style={{ width: "100%", height: "100%" }}
                 src="https://avatars.mds.yandex.net/get-kinopoisk-post-img/1362954/8c42c6eda888f12755f737b14dcc3f98/960x540"
                 alt=""
               />
@@ -54,6 +54,13 @@ const Carusel = () => {
         </Carousel>
       </div>
       <div className="history-hbo-t">
+        <div>
+          <img
+            style={{ width: "20%", margin: "10px" }}
+            src="https://play.hbomax.com/assets/images/branding/desktop/hbomax/dt-hbomax-logo-in_app.svg"
+            alt=""
+          />
+        </div>
         <p>
           HBO Max is an American subscription-based video on demand service
           owned by Warner Bros. Discovery. The service was launched in the

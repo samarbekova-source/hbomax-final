@@ -1,8 +1,59 @@
 .block-carousel-t {
+  margin-top: 40px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 100%;
 }
 .history-hbo-t {
   width: 45%;
-  position: absolute;
-  right: 20px;
-  top: 200px;
+  height: 400px;
+  padding: 20px;
+  box-shadow: 0 20px 35px rgba(0, 0, 0, 0.3);
+  border-radius: 5px;
+}
+
+.carusel {
+  width: 700px;
+  height: 100%;
+}
+
+@media (max-width: 1354px) {
+  .carusel {
+    width: 900px;
+    height: 420px;
+  }
+  .history-hbo-t {
+    width: 900px;
+    height: 300px;
+  }
+}
+
+@media (max-width: 900px) {
+  .carusel {
+    height: 420px;
+    width: 790px;
+  }
+}
+@media (max-width: 791px) {
+  .carusel {
+    height: 420px;
+    width: 680px;
+  }
+}
+
+@media (max-width: 690px) {
+  .carusel {
+    display: none;
+  }
+}
+@media (max-width: 496px) {
+  .history-hbo-t {
+    height: 350px;
+  }
+}
+@media (max-width: 496px) {
+  .history-hbo-t {
+    display: none;
+  }
 }

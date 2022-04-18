@@ -6,6 +6,3 @@ input[type="radio"] {
   cursor: pointer;
   transition: color 200ms;
 }
-p {
-  color: rgb(211, 219, 171);
-}

@@ -13,6 +13,13 @@ const Details = () => {
   console.log(oneMovie);
 
   return oneMovie ? (
+
+    <div className="container-details">
+      <div>
+        <img src={oneMovie.image1} width="70%" alt="" />
+        <div className="star-ch"></div>
+        <StartRating />
+      </div>
     <>
       <div className="container-details">
         <div>
@@ -21,6 +28,7 @@ const Details = () => {
             <StartRating />
           </div>
         </div>
+
 
         <div>
           <h1 className="desc-ch-h1">{oneMovie.name}</h1>
