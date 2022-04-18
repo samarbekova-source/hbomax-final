@@ -14,7 +14,7 @@ import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
 
-function Navbar() {
+function Navbar({ userImage }) {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
   const { currentUser, handleLogOut } = useContext(authContext);
@@ -108,8 +108,17 @@ function Navbar() {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
+
+              <LogoutOutlined
+                className="icon-antd"
+                style={{ color: "white", marginLeft: "150px" }}
+                onClick={handleLogOut}
+              />
+              <img src={userImage} onClick={handleLogOut} />
+
               <h4 className="user-name">{currentUser}</h4>
               <LogoutOutlined className="icon-antd" onClick={handleLogOut} />
+
             </span>
           ) : (
             <UserOutlined

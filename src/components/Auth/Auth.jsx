@@ -1,6 +1,6 @@
 import { useContext, useState } from "react";
 import { Form, Input, Button, Alert } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
+import { UserOutlined, LockOutlined, CameraOutlined } from "@ant-design/icons";
 import { authContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
@@ -9,6 +9,7 @@ const Auth = () => {
   const { handleLogin, handleSignUp, error } = useContext(authContext);
   const [isLogin, setIsLogin] = useState(false);
   const navigate = useNavigate();
+  const [userImage, setUserImage] = useState("");
 
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
@@ -19,6 +20,7 @@ const Auth = () => {
       handleSignUp(email, password, navigate);
     }
   };
+
   return (
     <div className="auth-container">
       {/* <div className="auth-box">
@@ -63,7 +65,16 @@ const Auth = () => {
                 placeholder="   Password"
               />
             </Form.Item>
-
+            <Form.Item>
+              <Input
+                className="auth-input"
+                prefix={<CameraOutlined />}
+                type="img"
+                placeholder="   Image"
+                value={userImage}
+                onChange={(e) => setUserImage(e.target.value)}
+              />
+            </Form.Item>
             <Form.Item>
               <Button
                 type="primary"

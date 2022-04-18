@@ -80,6 +80,7 @@ const Routing = () => {
       id: 12,
     },
 
+
     {
       link: "/details/:id",
       element: <Details />,
