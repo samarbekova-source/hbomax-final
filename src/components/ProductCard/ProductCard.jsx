@@ -105,9 +105,72 @@ const ProductCard = ({ item }) => {
               />
             </div>
           </div>
+
         </div>
       </div>
     </section>
+
+        }
+      />
+      <Meta
+        style={{
+          marginTop: "5px",
+          textAlign: "center",
+          color: "rgb(221, 212, 212);",
+        }}
+        title={
+          <>
+            <h4 style={{ color: "white" }}>{item.name}</h4>
+          </>
+        }
+      />
+      <div style={{ display: "flex", justifyContent: "space-around" }}>
+        <HeartOutlined
+          className="icons-ch"
+          onClick={() => {
+            addProductToFavorite(item);
+            setCheckItem2(checkItemInFavorite(item.id));
+          }}
+          style={{
+            margin: "10px",
+            fontSize: "25px",
+            color: checkItem2 ? "white" : "grey",
+          }}
+        />
+        <ShoppingOutlined
+          className="icons-ch"
+          onClick={() => {
+            addProductToCart(item);
+            setCheckItem(checkItemInCart(item.id));
+          }}
+          style={{
+            margin: "10px",
+            fontSize: "25px",
+            color: checkItem ? "white" : "grey",
+          }}
+        />
+
+        <FileSearchOutlined
+          onClick={() => navigate(`/details/${item.id}`)}
+          className="icons-ch"
+          style={{
+            margin: "10px",
+            fontSize: "25px",
+            color: checkItem ? "white" : "grey",
+          }}
+        />
+      </div>
+
+      {/* <div className="desc-t">
+        <Link to={`/edit/${item.id}`}>
+          <button>Edit</button>
+        </Link>
+        <button>mov</button>
+        <button onClick={() => deleteMovie(item.id)}>Delete</button>
+      </div> */}
+      <Card />
+    </div>
+
   );
 };
 
