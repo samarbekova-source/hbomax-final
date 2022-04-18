@@ -35,6 +35,7 @@
   background-color: rgb(27, 25, 33);
   display: flex;
   justify-content: space-between;
+  padding: 10px;
 }
 
 .footer-cont {
@@ -84,7 +85,7 @@
 .footer-logo img {
   margin-top: 50px;
   transform: rotate(320deg);
-  width: 35%;
+  width: 34%;
 }
 
 .last-line {

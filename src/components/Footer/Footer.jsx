@@ -36,7 +36,7 @@ const Footer = () => {
           alt=""
         />
       </div>
-      <div>
+      <div className="footer-ai-p">
         <div className="footer-second">
           <div className="footer-cont">
             <div className="footer-text">

@@ -62,23 +62,26 @@ function Navbar() {
       </a>
       <ul id="ul-t" className={active}>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            <Link to="/all">
-              <DesktopOutlined className="icon-antd" />
-            </Link>
-          </a>
+          <Link to="/all">
+            <a href="#" className="nav__link">
+              <DesktopOutlined className="icon-antd" />{" "}
+              <h1 style={{ color: "white", marginTop: "15px" }}>TV</h1>
+            </a>
+          </Link>
         </li>
         <li className="nav__item">
-          <a href="#" className="nav__link">
-            <Link to="/favorites">
+          <Link to="/favorites">
+            <a href="#" className="nav__link">
               <HeartOutlined className="icon-antd" />
-            </Link>
-          </a>
+              <h1 style={{ color: "white", marginTop: "15px" }}>Likes</h1>
+            </a>
+          </Link>
         </li>
         <li className="nav__item">
           <Link to="/cart">
             <a href="#" className="nav__link">
               <ShoppingOutlined className="icon-antd" />
+              <h1 style={{ color: "white", marginTop: "15px" }}>Cart</h1>
             </a>
           </Link>
         </li>

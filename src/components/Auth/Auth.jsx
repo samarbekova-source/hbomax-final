@@ -1,5 +1,5 @@
 import { useContext, useState } from "react";
-import { Form, Input, Button, Row, Col, Alert } from "antd";
+import { Form, Input, Button, Alert } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { authContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
@@ -43,6 +43,23 @@ const Auth = () => {
                 },
               ]}
             >
+
+              {isLogin ? "Log in" : "Sign up"}
+            </Button>
+            <br />
+            {isLogin ? (
+              <div className="auth-signup">
+                <span onClick={() => setIsLogin(false)}>Sign up</span>
+              </div>
+            ) : (
+              <div className="auth-text">
+                Have an account?{" "}
+                <span onClick={() => setIsLogin(true)}>Log in</span>
+              </div>
+            )}
+          </Form.Item>
+        </Form>
+
               <Input
                 className="auth-input"
                 prefix={<UserOutlined />}
@@ -85,6 +102,7 @@ const Auth = () => {
             </Form.Item>
           </Form>
         </div>
+
       </div>
     </div>
   );

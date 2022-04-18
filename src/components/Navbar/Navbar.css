@@ -62,9 +62,10 @@ body {
 .nav {
   display: flex;
   align-items: center;
-  height: 8vh;
+  height: 80px;
   background: rgb(5, 16, 27);
   z-index: 6;
+  width: 100%;
 }
 .nav__brand {
   text-transform: uppercase;
