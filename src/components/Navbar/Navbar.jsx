@@ -115,10 +115,15 @@ function Navbar() {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-              <LogoutOutlined className="user-icon" onClick={out} />
+              <LogoutOutlined id="icons-ch-log"
+                style={{ color: "white", marginLeft: "150px" }}
+                className="icon-antd"
+                onClick={out}
+              />
             </span>
           ) : (
             <UserOutlined
+            id="icons-ch-log"
               className="icon-antd"
               style={{ color: "white", marginLeft: "150px" }}
               onClick={() => navigate("/auth")}
@@ -127,7 +132,7 @@ function Navbar() {
         </div>
       </div>
 
-      <div onClick={navToggle} className={icon}>
+      <div onClick={navToggle} className={icon} id="icon-id">
         <div className="line1"></div>
         <div className="line2"></div>
         <div className="line3"></div>

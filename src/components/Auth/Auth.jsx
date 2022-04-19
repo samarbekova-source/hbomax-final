@@ -84,7 +84,7 @@ const Auth = () => {
 
           <Form.Item>
             <Button type="primary" htmlType="submit">
-              {isLoginForm ? "Войти" : "Зарегистрироваться"}
+              {isLoginForm ? "Log in" : "Sign in"}
             </Button>
             <br />
             {isLoginForm ? (
@@ -94,17 +94,17 @@ const Auth = () => {
                   style={{ color: "blue", cursor: "pointer" }}
                   onClick={() => setIsLoginForm(false)}
                 >
-                  Зарегистрируйтесь сейчас!
+                  Register now!
                 </span>
               </>
             ) : (
               <>
-                У вас есть аккаунт?
+                Have an account?
                 <span
                   style={{ color: "blue", cursor: "pointer" }}
                   onClick={() => setIsLoginForm(true)}
                 >
-                  Войти
+                  Log in
                 </span>
               </>
             )}
@@ -115,7 +115,7 @@ const Auth = () => {
               onClick={handlesLogin}
               style={{ cursor: "pointer" }}
             >
-              Войти через GOOGLE
+              Enter with GOOGLE
             </Button>
             <GoogleOutlined className="google" />
           </div>
