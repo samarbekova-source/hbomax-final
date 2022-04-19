@@ -2,7 +2,6 @@ import { Form, Input, Button, Row, Col, Alert } from "antd";
 import { UserOutlined, LockOutlined, GoogleOutlined } from "@ant-design/icons";
 import { useContext, useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { authContext } from "../../context/authContext";
 import "./Auth.css";
 import { chatContext } from "../../context/chatContext";
 

@@ -38,12 +38,16 @@ body {
   margin-top: 5px;
 }
 
-#ul-t {
+/* #ul-t {
   width: 50%;
   justify-content: center;
+<<<<<<< HEAD
+=======
+
+>>>>>>> c257dcc878b7d14992a107d0f6d0ca0d580c5272
   align-items: center;
   height: 100vh;
-}
+} */
 .nav__link {
   text-decoration: none;
   display: flex;
@@ -136,9 +140,14 @@ body {
   flex-direction: column-reverse;
 }
 
-.user .user-name {
+.user .user-email .user-name {
   font-weight: bold;
   color: white;
+  margin-right: 30px;
+  margin-top: -25px;
+  text-align: center;
+  /* padding: -10px; */
+  /* margin-bottom: 30px; */
 }
 
 .user .user-icon {
@@ -146,4 +155,5 @@ body {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  margin-right: 50px;
 }
