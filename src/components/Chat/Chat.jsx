@@ -53,10 +53,12 @@ const Chat = () => {
                 border:
                   user.uid === message.uid
                     ? "2px solid green"
-                    : "2px dashed red",
+                    : "2px solid red",
                 marginLeft: user.uid === message.uid ? "auto" : "10px",
                 width: "fit-content",
                 padding: 5,
+                background: "grey",
+                borderRadius: "15px",
               }}
             >
               <div>
@@ -68,16 +70,16 @@ const Chat = () => {
           ))}
         </div>
         <div className="container-chat">
-          <TextArea
+          <input
+            className="inp-massage"
             value={value}
             onChange={(e) => setValue(e.target.value)}
-            placeholder="Controlled autosize"
+            placeholder="massage"
             autoSize={{ minRows: 2, maxRows: 2 }}
-            style={{ width: "80%" }}
           />
-          <Button type="primary" onClick={sendMessage}>
-            Отправить
-          </Button>
+          <button className="btn-send" type="primary" onClick={sendMessage}>
+            send
+          </button>
         </div>
       </div>
     </div>

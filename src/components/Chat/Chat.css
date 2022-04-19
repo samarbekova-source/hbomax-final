@@ -1,7 +1,7 @@
 .container-kg {
   width: 100%;
   max-width: 60%;
-  border: 1px solid grey;
+  border: 1px solid rgb(229, 219, 219);
   margin: 20px auto;
   height: 60vh;
   margin-bottom: 100px;
@@ -9,8 +9,9 @@
 .container-kg-message {
   width: 100%;
   height: 60vh;
-  border: 1px solid gray;
+  border: 1px solid rgb(255, 233, 233);
   overflow-y: auto;
+  background-image: url(https://thumbs.dreamstime.com/b/tula-russia-jan-hbo-max-logo-smartphone-screen-red-background-242669265.jpg);
 }
 .container-spinner {
   width: 100%;
@@ -24,4 +25,18 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+.btn-send {
+  width: 150px;
+  height: 50px;
+  background-color: rgba(35, 35, 200, 0.799);
+  font-size: 30px;
+  font-weight: bold;
+  color: white;
+  border-radius: 10px;
+}
+.inp-massage {
+  width: 80%;
+  height: 70px;
+  background: linear-gradient(45deg, green, blue);
 }

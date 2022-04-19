@@ -115,7 +115,11 @@ function Navbar() {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-              <LogoutOutlined className="user-icon" onClick={out} />
+              <LogoutOutlined
+                style={{ color: "white", marginLeft: "150px" }}
+                className="icon-antd"
+                onClick={out}
+              />
             </span>
           ) : (
             <UserOutlined
