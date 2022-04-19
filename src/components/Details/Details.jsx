@@ -1,5 +1,4 @@
 import React, { useContext, useEffect } from "react";
-import StartRating from "../StarRating/StartRating";
 import { contextsMovie } from "../../context/contextsMovie";
 import { useNavigate, useParams } from "react-router-dom";
 import "./Details.css";
@@ -25,9 +24,7 @@ const Details = () => {
         <div className="container-details">
           <div>
             <img src={oneMovie.image1} width="70%" alt="" />
-            <div className="star-ch">
-              <StartRating />
-            </div>
+            <div className="star-ch"></div>
           </div>
 
           <div>
