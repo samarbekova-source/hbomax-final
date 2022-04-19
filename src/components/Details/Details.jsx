@@ -5,10 +5,11 @@ import { useParams } from "react-router-dom";
 import "./Details.css";
 import { authContext } from "../../context/authContext";
 import { Rate } from "antd";
+import { chatContext } from "../../context/chatContext";
 
 const Details = () => {
   const { getOneMovie, oneMovie } = useContext(contextsMovie);
-  const { currentUser } = useContext(authContext);
+  const { currentUser } = useContext(chatContext);
   const { updateRating } = useContext(contextsMovie);
   const [createRating, setCreateRating] = useState(null);
   const params = useParams();
@@ -43,16 +44,26 @@ const Details = () => {
         <div className="container-details">
           <div>
             <img src={oneMovie.image1} width="70%" alt="" />
-
+            <Rate
+              className="star-ch"
+              allowHalf
+              defaultValue={2.5}
+              onChange={(e) => saveRaiting(oneMovie.id, e)}
+            />
           </div>
 
           <div>
             <h1 className="desc-ch-h1">{oneMovie.name}</h1>
             <p>{oneMovie.year} year</p>
             <h3 className="desc-ch-h3">{oneMovie.description}</h3>
+            <div>
+              <button>del</button>
+              <button>edit</button>
+            </div>
           </div>
         </div>
       </div>
+
       <div>
         <video
           src={oneMovie.video}

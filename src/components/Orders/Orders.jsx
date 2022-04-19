@@ -30,7 +30,6 @@ const Orders = () => {
 
   return (
     <>
-      {/* hi there */}
       <div className="coniatner-main">
         <div className="order-form">
           <h2>Order form</h2>

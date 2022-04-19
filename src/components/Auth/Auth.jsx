@@ -1,99 +1,132 @@
+import { Form, Input, Button, Row, Col, Alert } from "antd";
+import { UserOutlined, LockOutlined, GoogleOutlined } from "@ant-design/icons";
 import { useContext, useState } from "react";
-import { Form, Input, Button, Alert } from "antd";
-import { UserOutlined, LockOutlined, CameraOutlined } from "@ant-design/icons";
-import { authContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
 import "./Auth.css";
+import { chatContext } from "../../context/chatContext";
 
 const Auth = () => {
-  const { handleLogin, handleSignUp, error } = useContext(authContext);
-  const [isLogin, setIsLogin] = useState(false);
+  const { handleLogin, handleSignUp, error, login } = useContext(chatContext);
+  const [isLoginForm, setIsLoginForm] = useState(false);
   const navigate = useNavigate();
-  const [userImage, setUserImage] = useState("");
-
+  function validatePassword(rule, value, callback) {
+    let regex = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/);
+    if (regex.test(value)) {
+      callback();
+    } else {
+      callback("Error");
+    }
+  }
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     const { email, password } = values;
-    if (isLogin) {
+    if (isLoginForm) {
       handleLogin(email, password, navigate);
     } else {
       handleSignUp(email, password, navigate);
     }
   };
 
+  function handlesLogin() {
+    login(navigate);
+  }
+
   return (
     <div className="auth-container">
-      <div className="auth-form-main">
-        {error ? <Alert description={error} type="error" /> : null}
-        <div className="auth-form">
+      <Row className="row">
+        <Col span={24}>
+          {error ? <Alert description={error} type="error" /> : null}
           <Form
+            className="login-form"
             name="normal_login"
-            initialValues={{ remember: true }}
+            initialValues={{
+              remember: true,
+            }}
             onFinish={onFinish}
           >
             <Form.Item
               name="email"
               rules={[
-                { required: true, message: "Please enter your username" },
+                {
+                  required: true,
+                  message: "Please enter your username!",
+                },
                 {
                   type: "email",
-                  message: "It is not valid email",
+                  message: "Inncorrect email!",
                 },
               ]}
             >
               <Input
-                className="auth-input"
-                prefix={<UserOutlined />}
-                placeholder="   Username"
+                style={{ borderRadius: "12px", height: "40px" }}
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                placeholder="  Username"
               />
             </Form.Item>
-
             <Form.Item
               name="password"
               rules={[
-                { required: true, message: "Please enter your password" },
+                {
+                  required: true,
+                  message: "Please enter your password!",
+                },
+                {
+                  validator: validatePassword,
+                },
               ]}
             >
               <Input
-                className="auth-input"
-                prefix={<LockOutlined />}
+                style={{ borderRadius: "12px", height: "40px" }}
+                prefix={<LockOutlined className="site-form-item-icon" />}
                 type="password"
-                placeholder="   Password"
+                placeholder="  Password"
               />
             </Form.Item>
+
             <Form.Item>
-              <Input
-                className="auth-input"
-                prefix={<CameraOutlined />}
-                type="img"
-                placeholder="   Image"
-                value={userImage}
-                onChange={(e) => setUserImage(e.target.value)}
-              />
-            </Form.Item>
-            <Form.Item>
-              <Button
-                type="primary"
-                htmlType="submit"
-                className="login-form-button"
-              >
-                {isLogin ? "Log in" : "Sign up"}
+              <Button id="login-button" type="primary" htmlType="submit">
+                {isLoginForm ? "Log in" : "Sign up"}
               </Button>
               <br />
-              {isLogin ? (
-                <div className="auth-signup">
-                  Or <span onClick={() => setIsLogin(false)}>Sign up</span>
-                </div>
+              {isLoginForm ? (
+                <>
+                  Or
+                  <span
+                    style={{
+                      color: "white",
+                      cursor: "pointer",
+                      fontWeight: "bolder",
+                    }}
+                    onClick={() => setIsLoginForm(false)}
+                  >
+                    Register now!
+                  </span>
+                </>
               ) : (
-                <div className="auth-text">
-                  Have an account?{" "}
-                  <span onClick={() => setIsLogin(true)}>Log in</span>
+                <div style={{ color: "white", fontSize: "15px" }}>
+                  Have and account?
+                  <span
+                    style={{
+                      fontWeight: "bolder",
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setIsLoginForm(true)}
+                  >
+                    Login
+                  </span>
                 </div>
               )}
             </Form.Item>
+            <div className="div-google">
+              <Button type="primary" onClick={handlesLogin}>
+                Login with GOOGLE account
+                <GoogleOutlined className="google" />
+              </Button>
+            </div>
           </Form>
-        </div>
-      </div>
+        </Col>
+      </Row>
     </div>
   );
 };

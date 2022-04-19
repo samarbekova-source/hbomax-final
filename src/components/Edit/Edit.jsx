@@ -2,6 +2,7 @@ import { Button, Form, Input, Spin } from "antd";
 import React, { useContext, useEffect, useState } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { contextsMovie } from "../../context/contextsMovie";
+// import "./Edit.css";
 
 const Edit = () => {
   const { getOneMovie, upDataMovie, oneMovie } = useContext(contextsMovie);
@@ -31,13 +32,7 @@ const Edit = () => {
   }
 
   return edit ? (
-    <div
-      style={{
-        backgroundColor: "blue",
-        width: "70%",
-        margin: "0, auto",
-      }}
-    >
+    <div className="edit-ch">
       <Input
         type="text"
         value={edit.name}

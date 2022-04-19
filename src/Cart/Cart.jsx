@@ -30,7 +30,7 @@ const Cart = () => {
                         className="btn-t-a"
                         onClick={() => deleteFromCart(item.item.id)}
                       >
-                        Del movie
+                        Delete
                       </Button>
                       <Link to="/orders">
                         <Button className="btn-t-a">Buy</Button>
