@@ -1,19 +1,15 @@
-
 import { LogoutOutlined, UserOutlined } from "@ant-design/icons";
 
 import {
   DesktopOutlined,
   HeartOutlined,
   ShoppingOutlined,
-
-
   MehOutlined,
-
 } from "@ant-design/icons";
 
 import React, { useContext, useEffect, useState } from "react";
 import { Link, useNavigate, useSearchParams } from "react-router-dom";
-import { authContext } from "../../context/authContext";
+import { chatContext } from "../../context/chatContext";
 import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
@@ -21,7 +17,7 @@ import "./Navbar.css";
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
-  const { currentUser, handleLogOut } = useContext(authContext);
+  const { currentUser, handleLogout } = useContext(chatContext);
   const navigate = useNavigate();
   const { getMovie } = useContext(contextsMovie);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -39,6 +35,9 @@ function Navbar() {
     getMovie();
   }, [searchParams]);
 
+  function out() {
+    handleLogout(navigate);
+  }
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -109,8 +108,7 @@ function Navbar() {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-              <h4 className="user-name">{currentUser}</h4>
-              <LogoutOutlined className="user-icon" onClick={handleLogOut} />
+              <LogoutOutlined className="user-icon" onClick={out} />
             </span>
           ) : (
             <UserOutlined

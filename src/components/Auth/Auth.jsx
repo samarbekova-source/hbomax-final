@@ -1,84 +1,128 @@
+import { Form, Input, Button, Row, Col, Alert } from "antd";
+import { UserOutlined, LockOutlined, GoogleOutlined } from "@ant-design/icons";
 import { useContext, useState } from "react";
-import { Form, Input, Button, Alert } from "antd";
-import { UserOutlined, LockOutlined } from "@ant-design/icons";
-import { authContext } from "../../context/authContext";
 import { useNavigate } from "react-router-dom";
+import { authContext } from "../../context/authContext";
 import "./Auth.css";
+import { chatContext } from "../../context/chatContext";
 
 const Auth = () => {
-  const { handleLogin, handleSignUp, error } = useContext(authContext);
-  const [isLogin, setIsLogin] = useState(false);
+  const { handleLogin, handleSignUp, error, login } = useContext(chatContext);
+  const [isLoginForm, setIsLoginForm] = useState(false);
   const navigate = useNavigate();
-
+  function validatePassword(rule, value, callback) {
+    let regex = new RegExp(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])[0-9a-zA-Z]{8,}$/);
+    if (regex.test(value)) {
+      callback();
+    } else {
+      callback(
+        "Пароль должен содержать как минимум одну цифру, одну строчную, одну прописную, 8 из указанных символов."
+      );
+    }
+  }
   const onFinish = (values) => {
     console.log("Received values of form: ", values);
     const { email, password } = values;
-    if (isLogin) {
+    if (isLoginForm) {
       handleLogin(email, password, navigate);
     } else {
       handleSignUp(email, password, navigate);
     }
   };
+
+  function handlesLogin() {
+    login(navigate);
+  }
+
   return (
-    <div>
-      {error ? <Alert description={error} type="error" /> : null}
-      <div className="auth-form">
+    <Row className="row">
+      <Col span={24}>
+        {error ? <Alert description={error} type="error" /> : null}
         <Form
           name="normal_login"
-          initialValues={{ remember: true }}
+          className="login-form"
+          initialValues={{
+            remember: true,
+          }}
           onFinish={onFinish}
         >
           <Form.Item
             name="email"
             rules={[
-              { required: true, message: "Please enter your username" },
+              {
+                required: true,
+                message: "Пожалуйста, введите ваше имя пользователя!",
+              },
               {
                 type: "email",
-                message: "It is not valid email",
+                message: "Недействительный адрес электронной почты!",
               },
             ]}
           >
             <Input
-              className="auth-input"
-              prefix={<UserOutlined />}
-              placeholder="   Username"
+              prefix={<UserOutlined className="site-form-item-icon" />}
+              placeholder="Username"
             />
           </Form.Item>
           <Form.Item
             name="password"
-            rules={[{ required: true, message: "Please enter your password" }]}
+            rules={[
+              {
+                required: true,
+                message: "Пожалуйста, введите Ваш пароль!",
+              },
+              {
+                validator: validatePassword,
+              },
+            ]}
           >
             <Input
-              className="auth-input"
-              prefix={<LockOutlined />}
+              prefix={<LockOutlined className="site-form-item-icon" />}
               type="password"
-              placeholder="   Password"
+              placeholder="Password"
             />
           </Form.Item>
 
           <Form.Item>
-            <Button
-              type="primary"
-              htmlType="submit"
-              className="login-form-button"
-            >
-              {isLogin ? "Log in" : "Sign up"}
+            <Button type="primary" htmlType="submit">
+              {isLoginForm ? "Войти" : "Зарегистрироваться"}
             </Button>
             <br />
-            {isLogin ? (
-              <div className="auth-signup">
-                <span onClick={() => setIsLogin(false)}>Sign up</span>
-              </div>
+            {isLoginForm ? (
+              <>
+                Or
+                <span
+                  style={{ color: "blue", cursor: "pointer" }}
+                  onClick={() => setIsLoginForm(false)}
+                >
+                  Зарегистрируйтесь сейчас!
+                </span>
+              </>
             ) : (
-              <div className="auth-text">
-                Have an account?{" "}
-                <span onClick={() => setIsLogin(true)}>Log in</span>
-              </div>
+              <>
+                У вас есть аккаунт?
+                <span
+                  style={{ color: "blue", cursor: "pointer" }}
+                  onClick={() => setIsLoginForm(true)}
+                >
+                  Войти
+                </span>
+              </>
             )}
           </Form.Item>
+          <div className="div-google">
+            <Button
+              type="primary"
+              onClick={handlesLogin}
+              style={{ cursor: "pointer" }}
+            >
+              Войти через GOOGLE
+            </Button>
+            <GoogleOutlined className="google" />
+          </div>
         </Form>
-      </div>
-    </div>
+      </Col>
+    </Row>
   );
 };
 

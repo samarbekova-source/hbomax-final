@@ -41,7 +41,6 @@ body {
 #ul-t {
   width: 50%;
   justify-content: center;
-  z-index: 5;
   align-items: center;
   height: 100vh;
 }
@@ -89,7 +88,7 @@ body {
   transition: 0.3s ease-in;
 }
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 1000px) {
   .nav__toggler {
     display: block;
     cursor: pointer;
@@ -104,6 +103,9 @@ body {
     flex-direction: column;
     transform: translateX(100%);
     transition: 0.5s ease-in;
+  }
+  #ul-t {
+    z-index: 3;
   }
 }
 /* Active Class */
