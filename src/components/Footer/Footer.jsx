@@ -1,4 +1,5 @@
 import {
+  CustomerServiceOutlined,
   FacebookOutlined,
   InstagramOutlined,
   TwitterOutlined,
@@ -8,6 +9,7 @@ import { Button } from "antd";
 import React from "react";
 import { Link } from "react-router-dom";
 import "./Footer.css";
+import { HiOutlineMail } from "react-icons/hi";
 
 const Footer = () => {
   return (
@@ -28,6 +30,15 @@ const Footer = () => {
         <a href="https://www.instagram.com/hbomax/?hl=en" target="_blank">
           <InstagramOutlined classname="icons-a" />
         </a>
+        <a href="" target="_blank">
+          <CustomerServiceOutlined className="icons-a" />
+        </a>
+        <Link to="/chat">
+          {" "}
+          <a>
+            <HiOutlineMail />
+          </a>
+        </Link>
       </div>
       <div>
         <img

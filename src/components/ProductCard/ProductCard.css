@@ -53,7 +53,7 @@ section .card-container-t:hover .card-box-t {
 
   width: 100%;
   height: 100%;
-  background-image: url(https://st4.depositphotos.com/4315033/20373/v/600/depositphotos_203730726-stock-illustration-explosion-vector-illustration-retro-pop.jpg);
+  background: -o-linear-gradient(45deg, black, green);
   backface-visibility: hidden;
   display: flex;
   justify-content: space-between;
@@ -65,7 +65,11 @@ section .card-container-t:hover .card-box-t {
 .content-bx div {
   transform-style: preserve-3d;
   padding: 20px;
-  background: linear-gradient(45deg, rgb(187, 109, 109), rgb(79, 71, 202));
+  background: linear-gradient(
+    45deg,
+    rgba(187, 109, 109, 0.482),
+    rgba(37, 30, 125, 0.905)
+  );
 }
 .content-bx div h1 {
   color: #fff;
