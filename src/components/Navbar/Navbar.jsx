@@ -9,15 +9,17 @@ import {
   ShoppingOutlined,
   MehOutlined,
 } from "@ant-design/icons";
-import { authContext } from "../../context/authContext";
+
+import { chatContext } from "../../context/chatContext";
 import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
+import { ADMIN_EMAIL } from "../../helpers/const";
 
-function Navbar({ userImage }) {
+function Navbar() {
   const [active, setActive] = useState("nav__menu");
   const [icon, setIcon] = useState("nav__toggler");
-  const { currentUser, handleLogOut } = useContext(authContext);
+  const { currentUser, handleLogout } = useContext(chatContext);
   const navigate = useNavigate();
   const { getMovie } = useContext(contextsMovie);
   const [searchParams, setSearchParams] = useSearchParams();
@@ -35,6 +37,9 @@ function Navbar({ userImage }) {
     getMovie();
   }, [searchParams]);
 
+  function out() {
+    handleLogout(navigate);
+  }
   const navToggle = () => {
     if (active === "nav__menu") {
       setActive("nav__menu nav__active");
@@ -94,12 +99,14 @@ function Navbar({ userImage }) {
         </li>
         <li className="nav__item">
           <a className="nav__link">
-            <Link to="/admin">
-              <MehOutlined
-                style={{ color: "white", marginTop: "10px" }}
-                className="icon-antd"
-              />
-            </Link>
+            {currentUser === ADMIN_EMAIL ? (
+              <Link to="/admin">
+                <MehOutlined
+                  style={{ color: "white", marginTop: "10px" }}
+                  className="icon-antd"
+                />
+              </Link>
+            ) : null}
           </a>
         </li>
       </ul>
@@ -108,17 +115,7 @@ function Navbar({ userImage }) {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-
-              <LogoutOutlined
-                className="icon-antd"
-                style={{ color: "white", marginLeft: "150px" }}
-                onClick={handleLogOut}
-              />
-              <img src={userImage} onClick={handleLogOut} />
-
-              <h4 className="user-name">{currentUser}</h4>
-              <LogoutOutlined className="icon-antd" onClick={handleLogOut} />
-
+              <LogoutOutlined className="user-icon" onClick={out} />
             </span>
           ) : (
             <UserOutlined

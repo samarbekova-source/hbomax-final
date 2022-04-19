@@ -3,6 +3,7 @@ import {
   HeartOutlined,
   MoreOutlined,
   FileSearchOutlined,
+  FireOutlined,
 } from "@ant-design/icons";
 
 import React, { useContext, useState } from "react";
@@ -69,7 +70,7 @@ const ProductCard = ({ item }) => {
               <h4>{item.description}</h4>
             </div>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <HeartOutlined
+              <FireOutlined
                 className="icons-ch"
                 onClick={() => {
                   addProductToFavorite(item);
@@ -94,7 +95,7 @@ const ProductCard = ({ item }) => {
                 }}
               />
               {/* <Link key="file" to={`/details/${item.id}`}> */}
-              <FileSearchOutlined
+              <HeartOutlined
                 onClick={() => navigate(`/details/${item.id}`)}
                 className="icons-ch"
                 style={{
@@ -110,5 +111,6 @@ const ProductCard = ({ item }) => {
     </section>
   );
 };
-
+//
 export default ProductCard;
+<FireOutlined />;

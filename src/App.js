@@ -5,11 +5,13 @@ import "antd/dist/antd.css";
 import CartContextProvider from "./context/cartContext";
 import FavoriteContextProvider from "./context/favoritesContext";
 import AuthContextProvider from "./context/authContext";
+import ChatContextProvider from "./context/chatContext";
 
 function App() {
   return (
     <>
-      <AuthContextProvider>
+      <ChatContextProvider>
+        {/* <AuthContextProvider> */}
         <MovieContextProvider>
           <FavoriteContextProvider>
             <CartContextProvider>
@@ -17,7 +19,8 @@ function App() {
             </CartContextProvider>
           </FavoriteContextProvider>
         </MovieContextProvider>
-      </AuthContextProvider>
+        {/* </AuthContextProvider> */}
+      </ChatContextProvider>
     </>
   );
 }
