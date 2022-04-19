@@ -43,7 +43,12 @@ const Details = () => {
         <div className="container-details">
           <div>
             <img src={oneMovie.image1} width="70%" alt="" />
-
+            <Rate
+              className="star-ch"
+              allowHalf
+              defaultValue={2.5}
+              onChange={(e) => saveRaiting(oneMovie.id, e)}
+            />
           </div>
 
           <div>
