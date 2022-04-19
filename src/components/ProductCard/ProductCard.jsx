@@ -73,7 +73,7 @@ const ProductCard = ({ item }) => {
               <h4>{item.description}</h4>
             </div>
             <div style={{ display: "flex", justifyContent: "space-around" }}>
-              <FireOutlined
+              <HeartOutlined
                 className="icons-ch"
                 onClick={() => {
                   addProductToFavorite(item);
@@ -98,7 +98,7 @@ const ProductCard = ({ item }) => {
                 }}
               />
               {/* <Link key="file" to={`/details/${item.id}`}> */}
-              <HeartOutlined
+              <FireOutlined
                 onClick={() => navigate(`/details/${item.id}`)}
                 className="icons-ch"
                 style={{
