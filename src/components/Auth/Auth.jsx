@@ -14,9 +14,7 @@ const Auth = () => {
     if (regex.test(value)) {
       callback();
     } else {
-      callback(
-        "Пароль должен содержать как минимум одну цифру, одну строчную, одну прописную, 8 из указанных символов."
-      );
+      callback("Error");
     }
   }
   const onFinish = (values) => {
@@ -34,94 +32,102 @@ const Auth = () => {
   }
 
   return (
-    <Row className="row">
-      <Col span={24}>
-        {error ? <Alert description={error} type="error" /> : null}
-        <Form
-          name="normal_login"
-          className="login-form"
-          initialValues={{
-            remember: true,
-          }}
-          onFinish={onFinish}
-        >
-          <Form.Item
-            name="email"
-            rules={[
-              {
-                required: true,
-                message: "Пожалуйста, введите ваше имя пользователя!",
-              },
-              {
-                type: "email",
-                message: "Недействительный адрес электронной почты!",
-              },
-            ]}
+    <div className="auth-container">
+      <Row className="row">
+        <Col span={24}>
+          {error ? <Alert description={error} type="error" /> : null}
+          <Form
+            className="login-form"
+            name="normal_login"
+            initialValues={{
+              remember: true,
+            }}
+            onFinish={onFinish}
           >
-            <Input
-              prefix={<UserOutlined className="site-form-item-icon" />}
-              placeholder="Username"
-            />
-          </Form.Item>
-          <Form.Item
-            name="password"
-            rules={[
-              {
-                required: true,
-                message: "Пожалуйста, введите Ваш пароль!",
-              },
-              {
-                validator: validatePassword,
-              },
-            ]}
-          >
-            <Input
-              prefix={<LockOutlined className="site-form-item-icon" />}
-              type="password"
-              placeholder="Password"
-            />
-          </Form.Item>
-
-          <Form.Item>
-            <Button type="primary" htmlType="submit">
-              {isLoginForm ? "Войти" : "Зарегистрироваться"}
-            </Button>
-            <br />
-            {isLoginForm ? (
-              <>
-                Or
-                <span
-                  style={{ color: "blue", cursor: "pointer" }}
-                  onClick={() => setIsLoginForm(false)}
-                >
-                  Зарегистрируйтесь сейчас!
-                </span>
-              </>
-            ) : (
-              <>
-                У вас есть аккаунт?
-                <span
-                  style={{ color: "blue", cursor: "pointer" }}
-                  onClick={() => setIsLoginForm(true)}
-                >
-                  Войти
-                </span>
-              </>
-            )}
-          </Form.Item>
-          <div className="div-google">
-            <Button
-              type="primary"
-              onClick={handlesLogin}
-              style={{ cursor: "pointer" }}
+            <Form.Item
+              name="email"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your username!",
+                },
+                {
+                  type: "email",
+                  message: "Inncorrect email!",
+                },
+              ]}
             >
-              Войти через GOOGLE
-            </Button>
-            <GoogleOutlined className="google" />
-          </div>
-        </Form>
-      </Col>
-    </Row>
+              <Input
+                style={{ borderRadius: "12px", height: "40px" }}
+                prefix={<UserOutlined className="site-form-item-icon" />}
+                placeholder="  Username"
+              />
+            </Form.Item>
+            <Form.Item
+              name="password"
+              rules={[
+                {
+                  required: true,
+                  message: "Please enter your password!",
+                },
+                {
+                  validator: validatePassword,
+                },
+              ]}
+            >
+              <Input
+                style={{ borderRadius: "12px", height: "40px" }}
+                prefix={<LockOutlined className="site-form-item-icon" />}
+                type="password"
+                placeholder="  Password"
+              />
+            </Form.Item>
+
+            <Form.Item>
+              <Button id="login-button" type="primary" htmlType="submit">
+                {isLoginForm ? "Log in" : "Sign up"}
+              </Button>
+              <br />
+              {isLoginForm ? (
+                <>
+                  Or
+                  <span
+                    style={{
+                      color: "white",
+                      cursor: "pointer",
+                      fontWeight: "bolder",
+                    }}
+                    onClick={() => setIsLoginForm(false)}
+                  >
+                    Register now!
+                  </span>
+                </>
+              ) : (
+                <div style={{ color: "white", fontSize: "15px" }}>
+                  Have and account?
+                  <span
+                    style={{
+                      fontWeight: "bolder",
+                      color: "white",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => setIsLoginForm(true)}
+                  >
+                    Login
+                  </span>
+                </div>
+              )}
+            </Form.Item>
+            <div className="div-google">
+              <Button type="primary" onClick={handlesLogin}>
+                Login with GOOGLE account
+                <GoogleOutlined className="google" />
+              </Button>
+            </div>
+          </Form>
+        </Col>
+      </Row>
+    </div>
   );
 };
 
