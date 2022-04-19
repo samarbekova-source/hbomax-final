@@ -55,11 +55,7 @@ const Routing = () => {
       element: <Cart />,
       id: 7,
     },
-    // {
-    //   link: "/edit/:id",
-    //   element: <Edit />,
-    //   id: 8,
-    // },
+
     {
       link: "/favorites",
       element: <Favorites />,
@@ -118,6 +114,7 @@ const Routing = () => {
           {ADMIN_ROUTES.map((item) => (
             <Route key={item.id} path={item.link} element={item.element} />
           ))}
+          {/* <Route path="*" element={<Error />} /> */}
         </Routes>
         <Footer />
       </BrowserRouter>

@@ -14,6 +14,7 @@ import { chatContext } from "../../context/chatContext";
 import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
+import { ADMIN_EMAIL } from "../../helpers/const";
 
 function Navbar() {
   const [active, setActive] = useState("nav__menu");
@@ -98,12 +99,14 @@ function Navbar() {
         </li>
         <li className="nav__item">
           <a className="nav__link">
-            <Link to="/admin">
-              <MehOutlined
-                style={{ color: "white", marginTop: "10px" }}
-                className="icon-antd"
-              />
-            </Link>
+            {currentUser === ADMIN_EMAIL ? (
+              <Link to="/admin">
+                <MehOutlined
+                  style={{ color: "white", marginTop: "10px" }}
+                  className="icon-antd"
+                />
+              </Link>
+            ) : null}
           </a>
         </li>
       </ul>
