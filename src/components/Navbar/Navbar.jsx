@@ -13,6 +13,7 @@ import { authContext } from "../../context/authContext";
 import { contextsMovie } from "../../context/contextsMovie";
 
 import "./Navbar.css";
+import { ADMIN_EMAIL } from "../../helpers/const";
 
 function Navbar({ userImage }) {
   const [active, setActive] = useState("nav__menu");
@@ -94,12 +95,14 @@ function Navbar({ userImage }) {
         </li>
         <li className="nav__item">
           <a className="nav__link">
-            <Link to="/admin">
-              <MehOutlined
-                style={{ color: "white", marginTop: "10px" }}
-                className="icon-antd"
-              />
-            </Link>
+            {currentUser === ADMIN_EMAIL ? (
+              <Link to="/admin">
+                <MehOutlined
+                  style={{ color: "white", marginTop: "10px" }}
+                  className="icon-antd"
+                />
+              </Link>
+            ) : null}
           </a>
         </li>
       </ul>
@@ -108,7 +111,6 @@ function Navbar({ userImage }) {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-
               <LogoutOutlined
                 className="icon-antd"
                 style={{ color: "white", marginLeft: "150px" }}
@@ -117,8 +119,7 @@ function Navbar({ userImage }) {
               <img src={userImage} onClick={handleLogOut} />
 
               <h4 className="user-name">{currentUser}</h4>
-              <LogoutOutlined className="icon-antd" onClick={handleLogOut} />
-
+              {/* <LogoutOutlined className="icon-antd" onClick={handleLogOut} /> */}
             </span>
           ) : (
             <UserOutlined

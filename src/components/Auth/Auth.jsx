@@ -23,10 +23,6 @@ const Auth = () => {
 
   return (
     <div className="auth-container">
-      {/* <div className="auth-box">
-        <h1>New here?</h1>
-        <p>Sign up and enjoy watching our movies!</p>
-      </div> */}
       <div className="auth-form-main">
         {error ? <Alert description={error} type="error" /> : null}
         <div className="auth-form">

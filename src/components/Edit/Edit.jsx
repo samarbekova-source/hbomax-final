@@ -31,7 +31,13 @@ const Edit = () => {
   }
 
   return edit ? (
-    <div>
+    <div
+      style={{
+        backgroundColor: "blue",
+        width: "70%",
+        margin: "0, auto",
+      }}
+    >
       <Input
         type="text"
         value={edit.name}

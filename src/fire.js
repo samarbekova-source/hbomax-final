@@ -14,6 +14,3 @@ const firebaseConfig = {
 const fire = firebase.initializeApp(firebaseConfig);
 
 export default fire;
-
-// js17@gmail.com -login admin
-// password: Password123
