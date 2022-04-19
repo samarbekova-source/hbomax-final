@@ -41,10 +41,7 @@ body {
 /* #ul-t {
   width: 50%;
   justify-content: center;
-<<<<<<< HEAD
-=======
 
->>>>>>> c257dcc878b7d14992a107d0f6d0ca0d580c5272
   align-items: center;
   height: 100vh;
 } */
@@ -156,4 +153,19 @@ body {
   flex-direction: row;
   justify-content: center;
   margin-right: 50px;
+}
+
+@media screen and (max-width: 425px) {
+  .toggle {
+    width: 10px;
+    height: 10px;
+  }
+
+  .user {
+    font-size: 5px;
+  }
+
+  .icon-antd {
+    font-size: 25px;
+  }
 }

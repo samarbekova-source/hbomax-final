@@ -9,11 +9,13 @@ import {
 import React, { useContext, useState } from "react";
 import { cartContext } from "../../context/cartContext";
 import { favoritesContext } from "../../context/favoritesContext";
-import { Card } from "antd";
+import { Button, Card } from "antd";
 
-import { useNavigate } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import { contextsMovie } from "../../context/contextsMovie";
 import "./ProductCard.css";
+import { chatContext } from "../../context/chatContext";
+import { ADMIN_EMAIL } from "../../helpers/const";
 const { Meta } = Card;
 
 const contentStyle = {
@@ -33,7 +35,8 @@ const ProductCard = ({ item }) => {
   const { addProductToFavorite, checkItemInFavorite } =
     useContext(favoritesContext);
   const [checkItem2, setCheckItem2] = useState(checkItemInFavorite(item.id));
-  const { deleteMovie } = useContext(contextsMovie);
+  const { upDataMovie, deleteMovie } = useContext(contextsMovie);
+  const { currentUser } = useContext(chatContext);
   const navigate = useNavigate();
   return (
     <section>
@@ -105,6 +108,15 @@ const ProductCard = ({ item }) => {
                 }}
               />
             </div>
+
+            {currentUser === ADMIN_EMAIL ? (
+              <div>
+                <Link to={`/edit/${item.id}`}>
+                  <Button onClick={() => upDataMovie(item.id)}>Edit</Button>
+                </Link>
+                <Button onClick={() => deleteMovie(item.id)}>Delete</Button>
+              </div>
+            ) : null}
           </div>
         </div>
       </div>

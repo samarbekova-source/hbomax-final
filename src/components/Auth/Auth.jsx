@@ -44,6 +44,72 @@ const Auth = () => {
             }}
             onFinish={onFinish}
           >
+
+            <Input
+              prefix={<UserOutlined className="site-form-item-icon" />}
+              placeholder="Username"
+            />
+          </Form.Item>
+          <Form.Item
+            name="password"
+            rules={[
+              {
+                required: true,
+                message: "Пожалуйста, введите Ваш пароль!",
+              },
+              {
+                validator: validatePassword,
+              },
+            ]}
+          >
+            <Input
+              prefix={<LockOutlined className="site-form-item-icon" />}
+              type="password"
+              placeholder="Password"
+            />
+          </Form.Item>
+
+          <Form.Item>
+            <Button type="primary" htmlType="submit">
+              {isLoginForm ? "Log in" : "Sign in"}
+            </Button>
+            <br />
+            {isLoginForm ? (
+              <>
+                Or
+                <span
+                  style={{ color: "blue", cursor: "pointer" }}
+                  onClick={() => setIsLoginForm(false)}
+                >
+                  Register now!
+                </span>
+              </>
+            ) : (
+              <>
+                Have an account?
+                <span
+                  style={{ color: "blue", cursor: "pointer" }}
+                  onClick={() => setIsLoginForm(true)}
+                >
+                  Log in
+                </span>
+              </>
+            )}
+          </Form.Item>
+          <div className="div-google">
+            <Button
+              type="primary"
+              onClick={handlesLogin}
+              style={{ cursor: "pointer" }}
+            >
+              Enter with GOOGLE
+            </Button>
+            <GoogleOutlined className="google" />
+          </div>
+        </Form>
+      </Col>
+    </Row>
+
             <Form.Item
               name="email"
               rules={[
@@ -128,6 +194,7 @@ const Auth = () => {
         </Col>
       </Row>
     </div>
+
   );
 };
 
