@@ -129,9 +129,12 @@ body {
   cursor: pointer;
 }
 
-@media (max-width: 621px) {
+@media (max-width: 627px) {
   #h1-t {
     font-size: 4rem;
+  }
+  .filter-third {
+    font-size: 20px;
   }
 }
 @media (max-width: 430px) {
