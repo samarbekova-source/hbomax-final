@@ -12,7 +12,12 @@
       "types": "all",
       "likes": [],
       "comments": [
-        {}
+        {},
+        {
+          "comment": "hsf",
+          "user": "omurkulovabs@gmail.com",
+          "id": 1650452559400
+        }
       ],
       "ratings": {
         "rating": 5,

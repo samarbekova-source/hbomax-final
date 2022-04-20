@@ -39,6 +39,7 @@ const Details = () => {
       updateRating(params.id, ratings);
     }
   }
+  // commit
   function addCommit(newCommit) {
     let newCom = {
       ...newCommit,
@@ -57,6 +58,7 @@ const Details = () => {
 
     setUserCommit("");
   }
+  // end commit
   // function saveLikes(newLike) {
   //   let like = {
   //     user: currentUser,
@@ -150,7 +152,7 @@ const Details = () => {
                   dataSource={oneMovie.comments}
                   renderItem={(item) => (
                     <div className="div-commit">
-                      <span style={{ color: "grey" }}> {item.user.email}</span>:{" "}
+                      {/* <span style={{ color: "grey" }}> {item.user.email}</span>:{" "} */}
                       <p style={{ color: "white" }}>{item.comment}</p>
                     </div>
                   )}
