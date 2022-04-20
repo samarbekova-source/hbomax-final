@@ -77,7 +77,7 @@ body {
   /* padding-left: 5%; */
   display: flex;
   justify-content: space-between;
-  justify-content: center;
+  flex-direction: column;
 }
 
 .main-popular {
@@ -88,15 +88,23 @@ body {
   align-items: center;
   flex-direction: column;
 }
+.filter-third {
+  font-size: 40px;
+  font-weight: bold;
+  color: rgb(113, 205, 239);
+  text-shadow: 0 0 10px #03bcf4, 0 0 20px #03bcf4, 0 0 40px #03bcf4,
+    0 0 80px #03bcf4, 0 0 120px #03bcf4;
+}
 
 .main-popular img {
   width: 100%;
+  height: 100%;
 }
 
 .imgsa {
-  width: 300px;
-  height: 420px;
-  margin: 3%;
+  width: 200px;
+  height: 300px;
+  margin: 10px;
 }
 .imgsa img {
   width: 100%;
@@ -136,4 +144,7 @@ body {
   #h1-t {
     font-size: 2.4rem;
   }
+}
+p {
+  color: #fff;
 }

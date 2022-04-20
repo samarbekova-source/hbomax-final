@@ -115,9 +115,8 @@ function Navbar() {
         <div className="user">
           {currentUser ? (
             <span className="user-email">
-
-              <LogoutOutlined id="icons-ch-log"
-
+              <LogoutOutlined
+                id="icons-ch-log"
                 style={{ color: "white", marginLeft: "150px" }}
                 className="icon-antd"
                 onClick={out}
@@ -125,7 +124,7 @@ function Navbar() {
             </span>
           ) : (
             <UserOutlined
-            id="icons-ch-log"
+              id="icons-ch-log"
               className="icon-antd"
               style={{ color: "white", marginLeft: "150px" }}
               onClick={() => navigate("/auth")}

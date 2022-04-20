@@ -4,6 +4,7 @@
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
+  margin: 20px;
 }
 /* .movies-filter-container button { */
 /* margin-right: 2rem;

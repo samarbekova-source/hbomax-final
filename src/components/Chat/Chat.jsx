@@ -52,8 +52,8 @@ const Chat = () => {
                 margin: 10,
                 border:
                   user.uid === message.uid
-                    ? "2px solid green"
-                    : "2px solid red",
+                    ? "2px solid yellow"
+                    : "2px solid blue",
                 marginLeft: user.uid === message.uid ? "auto" : "10px",
                 width: "fit-content",
                 padding: 5,
