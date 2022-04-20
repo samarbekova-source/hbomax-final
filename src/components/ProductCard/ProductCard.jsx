@@ -4,6 +4,7 @@ import {
   MoreOutlined,
   FileSearchOutlined,
   FireOutlined,
+  VideoCameraOutlined,
 } from "@ant-design/icons";
 
 import React, { useContext, useState } from "react";
@@ -47,7 +48,7 @@ const ProductCard = ({ item }) => {
               // hoverable
               style={{
                 // border: 0,
-                width: "300px",
+                width: "200px",
                 gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
                 gridColumnGap: "1rem",
                 gridRowGap: "0px",
@@ -98,7 +99,7 @@ const ProductCard = ({ item }) => {
                 }}
               />
               {/* <Link key="file" to={`/details/${item.id}`}> */}
-              <FireOutlined
+              <VideoCameraOutlined
                 onClick={() => navigate(`/details/${item.id}`)}
                 className="icons-ch"
                 style={{
@@ -112,9 +113,19 @@ const ProductCard = ({ item }) => {
             {currentUser === ADMIN_EMAIL ? (
               <div>
                 <Link to={`/edit/${item.id}`}>
-                  <Button onClick={() => upDataMovie(item.id)}>Edit</Button>
+                  <button
+                    className="btn-crud"
+                    onClick={() => upDataMovie(item.id)}
+                  >
+                    Edit
+                  </button>
                 </Link>
-                <Button onClick={() => deleteMovie(item.id)}>Delete</Button>
+                <button
+                  className="btn-crud"
+                  onClick={() => deleteMovie(item.id)}
+                >
+                  Delete
+                </button>
               </div>
             ) : null}
           </div>

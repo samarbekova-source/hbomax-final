@@ -38,17 +38,26 @@ const MainPage = () => {
             <Link to="/fantasy">
               <img src={harry} alt="" />
             </Link>
+            <div>
+              <h1 className="filter-third">FANTASY</h1>
+            </div>
           </div>
 
           <div className="imgs">
             <Link to="/comedy">
               <img src={romantic} alt="" />
             </Link>
+            <div>
+              <h1 className="filter-third">ROMANTIC</h1>
+            </div>
           </div>
           <div className="imgs">
             <Link to="/action">
               <img src={action} alt="" />
             </Link>
+            <div>
+              <h1 className="filter-third">ACTION</h1>
+            </div>
           </div>
         </div>
       </div>

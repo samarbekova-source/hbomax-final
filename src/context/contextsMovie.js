@@ -69,6 +69,14 @@ const MovieContextProvider = ({ children }) => {
     await axios.patch(`${MOVIES_API}/${id}`, { ratings: ratings });
     getOneMovie();
   }
+  async function editOneCommit(id, comments) {
+    await axios.patch(`${MOVIES_API}/${id}`, { comments: comments });
+    getOneMovie(id);
+  }
+  async function editOneLike(id, likes) {
+    await axios.patch(`${MOVIES_API}/${id}`, { likes: likes });
+    getOneMovie();
+  }
   return (
     <contextsMovie.Provider
       value={{
@@ -86,6 +94,8 @@ const MovieContextProvider = ({ children }) => {
         handleAddWatch,
         deleteMovie,
         updateRating,
+        editOneCommit,
+        editOneLike,
       }}
     >
       {children}

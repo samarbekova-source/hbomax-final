@@ -20,7 +20,9 @@ const Cart = () => {
           dataSource={cart.movies}
           renderItem={(item) => (
             <List.Item
-              extra={<img src={item.item.image1} alt="img" width={272} />}
+              extra={
+                <img className="img-t-card" src={item.item.image1} alt="img" />
+              }
             >
               <List.Item.Meta
                 description={
