@@ -3,7 +3,6 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Cart from "./Cart/Cart";
 import Action from "./components/Action/Action";
 import Add from "./components/Add/Add";
-import AddList from "./components/AddList/AddList";
 import Comedy from "./components/Comedy/Comedy";
 import Edit from "./components/Edit/Edit";
 import Fantasy from "./components/Fantasy/Fantasy";
@@ -45,11 +44,7 @@ const Routing = () => {
       element: <Add />,
       id: 5,
     },
-    {
-      link: "/addcard",
-      element: <AddList />,
-      id: 6,
-    },
+
     {
       link: "/cart",
       element: <Cart />,

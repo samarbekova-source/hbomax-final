@@ -58,23 +58,6 @@ const Details = () => {
 
     setUserCommit("");
   }
-  // end commit
-  // function saveLikes(newLike) {
-  //   let like = {
-  //     user: currentUser,
-  //     id: Date.now(),
-  //   };
-  //   let userLikes = oneMovie.likes.some((item) => item.user === currentUser);
-  //   if (userLikes) {
-  //     let filteredLikes = oneMovie.likes.filter((item) => {
-  //       return item.user !== currentUser;
-  //     });
-  //     updateLikes(params.id, filteredLikes);
-  //   } else {
-  //     let likes = [...oneProduct.likes, like];
-  //     updateLikes(params.id, likes);
-  //   }
-  // }
 
   function saveLikes() {
     let like = {
@@ -112,22 +95,8 @@ const Details = () => {
             <h1 className="desc-ch-h1">{oneMovie.name}</h1>
             <p>{oneMovie.year} year</p>
             <h3 className="desc-ch-h3">{oneMovie.description}</h3>
-            {/* {currentUser ? (
-              <>
-                <LikeOutlined
-                  onClick={() => saveLikes()}
-                  style={{ fontSize: "40px" }}
-                />
-                <span>{oneMovie.likes.length}</span>{" "}
-              </>
-            ) : (
-              <Link to="/auth">
-                <LikeOutlined
-                  onClick={() => saveLikes()}
-                  style={{ fontSize: "40px", textAlign: "left" }}
-                />
-              </Link>
-            )} */}
+
+            {/* like */}
             <Badge count={oneMovie.likes.length}>
               <LikeOutlined
                 style={{
@@ -144,7 +113,8 @@ const Details = () => {
               />
             </Badge>
           </div>
-
+          {/* like end */}
+          {/* comment */}
           <div className="comment-cont">
             <div>
               <div className="div-block-com">
@@ -171,6 +141,7 @@ const Details = () => {
             />
             <button onClick={() => addCommit(userCommit)}>save</button>
           </div>
+          {/* comment end */}
         </div>
       </div>
 
